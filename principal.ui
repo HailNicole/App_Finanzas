@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Principal</class>
+ <widget class="QMainWindow" name="Principal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOpciones">
+    <property name="title">
+     <string>Opciones</string>
+    </property>
+    <addaction name="actionAgregar_miembro"/>
+    <addaction name="separator"/>
+    <addaction name="actionAgregar_categoria"/>
+    <addaction name="separator"/>
+    <addaction name="actionRegistrar"/>
+    <addaction name="actionReporte"/>
+   </widget>
+   <widget class="QMenu" name="menuAcerca_de">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcerca_de"/>
+   </widget>
+   <addaction name="menuOpciones"/>
+   <addaction name="menuAcerca_de"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAgregar_miembro">
+   <property name="text">
+    <string>Agregar miembro</string>
+   </property>
+  </action>
+  <action name="actionAgregar_categoria">
+   <property name="text">
+    <string>Agregar categoría</string>
+   </property>
+  </action>
+  <action name="actionRegistrar">
+   <property name="text">
+    <string>Registrar</string>
+   </property>
+  </action>
+  <action name="actionReporte">
+   <property name="text">
+    <string>Reporte</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="text">
+    <string>Acerca de</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
