@@ -32,3 +32,9 @@ void Principal::on_actionAgregar_miembro_triggered()
     m.exec();
 }
 
+bool Principal::entrar()
+{
+    login log;
+
+}
+

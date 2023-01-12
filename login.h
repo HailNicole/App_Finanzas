@@ -2,6 +2,8 @@
 #define LOGIN_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include "principal.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class login; }
@@ -14,6 +16,11 @@ class login : public QMainWindow
 public:
     login(QWidget *parent = nullptr);
     ~login();
+
+private slots:
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::login *ui;

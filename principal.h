@@ -5,6 +5,7 @@
 #include <QDebug>
 #include "acerca_de.h"
 #include "miembros.h"
+#include "login.h"
 
 #define VERSION "0.2"
 namespace Ui {
@@ -26,6 +27,7 @@ private slots:
 
 private:
     Ui::Principal *ui;
+    bool entrar();
 };
 
 #endif // PRINCIPAL_H

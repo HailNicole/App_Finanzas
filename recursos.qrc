@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/imagen">
         <file>recursos/14731364_rm222batch5-kul-06.jpg</file>
+        <file>recursos/perrito.jpg</file>
     </qresource>
 </RCC>
