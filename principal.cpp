@@ -29,7 +29,9 @@ void Principal::on_actionAcerca_de_triggered()
 void Principal::on_actionAgregar_miembro_triggered()
 {
     Miembros m(this);
+    this->hide();
     m.exec();
+    this->show();
 }
 
 bool Principal::entrar()
