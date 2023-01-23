@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "agregar_miembros.h"
+
 namespace Ui {
 class Miembros;
 }

@@ -1,5 +1,6 @@
 #include "login.h"
 #include "principal.h"
+#include "registrar_usuario.h"
 
 #include <QApplication>
 

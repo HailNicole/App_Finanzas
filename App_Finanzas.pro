@@ -14,21 +14,24 @@ SOURCES += \
     main.cpp \
     login.cpp \
     miembros.cpp \
-    principal.cpp
+    principal.cpp \
+    registrar_usuario.cpp
 
 HEADERS += \
     acerca_de.h \
     agregar_miembros.h \
     login.h \
     miembros.h \
-    principal.h
+    principal.h \
+    registrar_usuario.h
 
 FORMS += \
     acerca_de.ui \
     agregar_miembros.ui \
     login.ui \
     miembros.ui \
-    principal.ui
+    principal.ui \
+    registrar_usuario.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
