@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Agregar_Miembros</class>
- <widget class="QDialog" name="Agregar_Miembros">
+ <class>Agregar_Categorias</class>
+ <widget class="QDialog" name="Agregar_Categorias">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -39,7 +39,7 @@
      <x>20</x>
      <y>30</y>
      <width>281</width>
-     <height>81</height>
+     <height>52</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -50,27 +50,17 @@
       </property>
      </widget>
     </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Tipo</string>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="1">
      <widget class="QLineEdit" name="lineEdit"/>
     </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>Apellido</string>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_3"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>Rol</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
      <widget class="QLineEdit" name="lineEdit_2"/>
     </item>
    </layout>
@@ -83,7 +73,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Agregar_Miembros</receiver>
+   <receiver>Agregar_Categorias</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -99,7 +89,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Agregar_Miembros</receiver>
+   <receiver>Agregar_Categorias</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

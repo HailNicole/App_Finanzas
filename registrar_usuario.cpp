@@ -8,6 +8,7 @@ Registrar_usuario::Registrar_usuario(QWidget *parent) :
     ui(new Ui::Registrar_usuario)
 {
     ui->setupUi(this);
+    setWindowTitle("Registrar");
 }
 
 Registrar_usuario::~Registrar_usuario()

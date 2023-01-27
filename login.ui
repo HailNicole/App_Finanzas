@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>login</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="recursos.qrc">
+    <normaloff>:/imagen/recursos/safe home.png</normaloff>:/imagen/recursos/safe home.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">#centralwidget{
@@ -274,6 +278,8 @@ background-color: rgb(133, 202, 97);</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>

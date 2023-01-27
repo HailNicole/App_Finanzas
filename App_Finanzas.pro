@@ -10,7 +10,9 @@ CONFIG += c++11
 
 SOURCES += \
     acerca_de.cpp \
+    agregar_categorias.cpp \
     agregar_miembros.cpp \
+    categorias.cpp \
     main.cpp \
     login.cpp \
     miembros.cpp \
@@ -19,7 +21,9 @@ SOURCES += \
 
 HEADERS += \
     acerca_de.h \
+    agregar_categorias.h \
     agregar_miembros.h \
+    categorias.h \
     login.h \
     miembros.h \
     principal.h \
@@ -27,7 +31,9 @@ HEADERS += \
 
 FORMS += \
     acerca_de.ui \
+    agregar_categorias.ui \
     agregar_miembros.ui \
+    categorias.ui \
     login.ui \
     miembros.ui \
     principal.ui \
@@ -40,3 +46,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     recursos.qrc
+
+DISTFILES += \
+    recursos/safe home.png

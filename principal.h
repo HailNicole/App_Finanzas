@@ -5,7 +5,9 @@
 #include <QDebug>
 #include "acerca_de.h"
 #include "miembros.h"
+#include "categorias.h"
 #include "login.h"
+#include "registrar_usuario.h"
 
 #define VERSION "0.2"
 namespace Ui {
@@ -23,7 +25,11 @@ public:
 private slots:
     void on_actionAcerca_de_triggered();
 
-    void on_actionAgregar_miembro_triggered();
+    void on_actionMiembros_triggered();
+
+    void on_actionCategorias_triggered();
+
+    void on_actionRegistrar_triggered();
 
 private:
     Ui::Principal *ui;

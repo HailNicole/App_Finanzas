@@ -7,9 +7,9 @@ Miembros::Miembros(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowTitle("Miembros");
-    ui->tblLista->setColumnCount(2);
+    ui->tblLista->setColumnCount(3);
     QStringList titulo;
-    titulo << "Nombre" << "Rol";
+    titulo << "Nombre" << "Apellido" << "Rol";
     ui->tblLista->setHorizontalHeaderLabels(titulo);
 }
 

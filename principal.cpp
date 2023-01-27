@@ -1,4 +1,5 @@
 #include "principal.h"
+#include "categorias.h"
 #include "ui_principal.h"
 
 Principal::Principal(QWidget *parent) :
@@ -6,6 +7,8 @@ Principal::Principal(QWidget *parent) :
     ui(new Ui::Principal)
 {
     ui->setupUi(this);
+    setWindowTitle("Safe Home");
+
 }
 
 Principal::~Principal()
@@ -25,13 +28,29 @@ void Principal::on_actionAcerca_de_triggered()
 }
 
 
-void Principal::on_actionAgregar_miembro_triggered()
+void Principal::on_actionMiembros_triggered()
 {
     Miembros m(this);
-   /* this->hide();
+    this->hide();
     m.exec();
     this->show();
-    */
+
+}
+
+void Principal::on_actionCategorias_triggered()
+{
+    Categorias c(this);
+    this->hide();
+    c.exec();
+    this->show();
+}
+
+void Principal::on_actionRegistrar_triggered()
+{
+    Registrar_usuario ru(this);
+    this->hide();
+    ru.exec();
+    this->show();
 }
 
 bool Principal::entrar()
