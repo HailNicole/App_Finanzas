@@ -14,6 +14,7 @@ Miembros::Miembros(QWidget *parent) :
     QStringList titulo;
     titulo << "Nombre" << "Apellido" << "Rol";
     ui->tblLista->setHorizontalHeaderLabels(titulo);
+    cargarFamiliares();
 }
 
 Miembros::~Miembros()
@@ -122,7 +123,7 @@ void Miembros::on_btn_guardar_clicked()
         QMessageBox::warning(0,"Guardar contactos","Agenda sin datos para guardar");
         return;
     }
-    /*
+
     // Abrir el archivo y guardar
     QFile archivo(ARCHIVO1);
     if (archivo.open(QFile::WriteOnly | QFile::Truncate)) {
@@ -138,6 +139,31 @@ void Miembros::on_btn_guardar_clicked()
         QMessageBox::information(this,"Guardar contactos","Contactos guardados con éxito");
     }else{
         QMessageBox::critical(this,"Guardar contactos", "No se puede escribir sobre " + ARCHIVO1);
-    }*/
+    }
+}
+
+void Miembros::cargarFamiliares()
+{
+    // Verificar si el archivo existe
+    QFile arc(ARCHIVO1);
+    if (!arc.exists())
+        return;
+
+    // cargar datos
+    if (arc.open(QFile::ReadOnly)) {
+        QTextStream entrada(&arc);
+        int fila;
+        while(!entrada.atEnd()){
+            QString linea = entrada.readLine();
+            QStringList datos = linea.split(";");
+            //Agregar a la tabla
+            fila = ui->tblLista->rowCount();
+            ui->tblLista->insertRow(fila);
+            ui->tblLista->setItem(fila, NOMBRE, new QTableWidgetItem(datos[NOMBRE]));
+            ui->tblLista->setItem(fila, APELLIDO, new QTableWidgetItem(datos[APELLIDO]));
+            ui->tblLista->setItem(fila, ROL, new QTableWidgetItem(datos[ROL]));
+        }
+        arc.close();
+    }
 }
 

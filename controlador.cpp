@@ -48,3 +48,11 @@ bool Controlador::validar_texto(QString texto)
     }
     return true;
 }
+
+bool Controlador::entrar(bool validar)
+{
+    if(!validar){
+        return false;
+    }
+    return true;
+}

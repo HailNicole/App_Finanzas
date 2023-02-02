@@ -1,5 +1,6 @@
 #include "principal.h"
 #include "ui_principal.h"
+#include "QDebug"
 
 Principal::Principal(QWidget *parent) :
     QMainWindow(parent),
@@ -29,31 +30,34 @@ void Principal::on_actionAcerca_de_triggered()
 
 void Principal::on_actionMiembros_triggered()
 {
-    Miembros m(this);
+    Miembros *m = new Miembros(this);
     this->hide();
-    m.exec();
+    m->exec();
     this->show();
 
 }
 
 void Principal::on_actionCategorias_triggered()
 {
-    Categorias c(this);
+    Categorias *c = new Categorias(this);
     this->hide();
-    c.exec();
+    c->exec();
     this->show();
 }
 
 void Principal::on_actionRegistrar_triggered()
 {
-    Registrar_usuario ru(this);
-    this->hide();
-    ru.exec();
-    this->show();
+
 }
 
-bool Principal::entrar()
+bool Principal::acceso()
 {
-    //login log;
+    Acceso *access = new Acceso(this);
+    access->exec();
+
+    if(m_controlador->entrar(access->getBandera())){
+        return true;
+    }
+    return false;
 }
 

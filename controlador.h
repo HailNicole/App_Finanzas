@@ -18,7 +18,7 @@ public:
 
     bool validar_email(QString email);
     bool validar_texto(QString texto);
-    bool entrar();
+    bool entrar(bool validar);
 signals:
 
 };

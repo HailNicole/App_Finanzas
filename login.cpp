@@ -46,19 +46,22 @@ void login::on_btn_Registrar_clicked()
     }
 }
 
-bool login::on_btn_Ingresar_clicked()
+void login::on_btn_Ingresar_clicked()
 {
+    bool bandera=false;
     QMapIterator<QString, QString> i(usuarios2);
     while (i.hasNext())
     {
         i.next();
         if(i.key() == ui->in_Usuario->text() && (i.value()) == ui->in_Contra->text())
         {
-           return true;
+            bandera=true;
+            m_controlador->entrar(bandera);
+
         }
     }
     QMessageBox::warning(this, tr("Administrador"), tr("Usuario y/o Contraseña Incorrecta"), tr("Aceptar"));
-    return false;
+    m_controlador->entrar(bandera);
 }
 
 void login::cargarUsuarios()

@@ -6,8 +6,8 @@
 #include "acerca_de.h"
 #include "miembros.h"
 #include "categorias.h"
-#include "login.h"
 #include "controlador.h"
+#include "acceso.h"
 
 #define VERSION "0.2"
 namespace Ui {
@@ -21,7 +21,7 @@ class Principal : public QMainWindow
 public:
     explicit Principal(QWidget *parent = nullptr);
     ~Principal();
-
+    bool acceso();
 private slots:
     void on_actionAcerca_de_triggered();
 
@@ -34,7 +34,7 @@ private slots:
 private:
     Ui::Principal *ui;
     Controlador *m_controlador;
-    bool entrar();
+
 };
 
 #endif // PRINCIPAL_H
