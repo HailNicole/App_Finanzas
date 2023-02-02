@@ -1,8 +1,9 @@
 #ifndef MIEMBROS_H
 #define MIEMBROS_H
 
-#include <QDialog>
+#include <QWidget>
 #include "agregar_miembros.h"
+#include <QMessageBox>
 
 namespace Ui {
 class Miembros;
@@ -17,12 +18,22 @@ public:
     ~Miembros();
 
 private slots:
-    void on_buttonBox_accepted();
+    void on_btn_agregar_clicked();
 
-    void on_buttonBox_rejected();
+    void on_btn_borrar_clicked();
+
+    void on_btn_editar_clicked();
+
+    void on_btn_cancelar_clicked();
+
+    void on_btn_guardar_clicked();
 
 private:
     Ui::Miembros *ui;
+    enum Columna
+    {
+        NOMBRE, APELLIDO, ROL
+    };
 };
 
 #endif // MIEMBROS_H

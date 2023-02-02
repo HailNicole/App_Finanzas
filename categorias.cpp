@@ -4,14 +4,14 @@
 Categorias::Categorias(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Categorias)
-
 {
     ui->setupUi(this);
     setWindowTitle("Categorias");
-    ui->tabla->setColumnCount(3);
+    // Configurar la tabla
+    ui->tblLista_cat->setColumnCount(1);
     QStringList titulo;
-    titulo << "ID" << "Nombre" << "Tipo";
-    ui->tabla->setHorizontalHeaderLabels(titulo);
+    titulo << "Tipo";
+    ui->tblLista_cat->setHorizontalHeaderLabels(titulo);
 }
 
 Categorias::~Categorias()
@@ -19,14 +19,26 @@ Categorias::~Categorias()
     delete ui;
 }
 
-void Categorias::on_buttonBox_accepted()
+void Categorias::on_btn_agrcat_clicked()
 {
-    Agregar_Categorias ac;
-    ac.exec();
+
 }
 
 
-void Categorias::on_buttonBox_rejected()
+void Categorias::on_btn_cancat_clicked()
 {
-    reject();
+
 }
+
+
+void Categorias::on_btn_borrarcat_clicked()
+{
+
+}
+
+
+void Categorias::on_btn_editcat_clicked()
+{
+
+}
+

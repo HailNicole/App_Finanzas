@@ -36,7 +36,9 @@
     <addaction name="actionCategorias"/>
     <addaction name="separator"/>
     <addaction name="actionRegistrar"/>
+    <addaction name="separator"/>
     <addaction name="actionReporte"/>
+    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuAcerca_de">
     <property name="title">

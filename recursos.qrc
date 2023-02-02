@@ -4,6 +4,8 @@
         <file>recursos/perrito.jpg</file>
         <file>recursos/ver.png</file>
         <file>recursos/safe home.png</file>
+        <file>recursos/goma-de-borrar.png</file>
+        <file>recursos/firma.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

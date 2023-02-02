@@ -5,6 +5,7 @@
 #include <QFile>
 #include <QMessageBox>
 #include <QMap>
+#include "controlador.h"
 
 namespace Ui {
 class Registrar_usuario;
@@ -30,7 +31,7 @@ private slots:
 
 private:
     Ui::Registrar_usuario *ui;
-    bool validar_email(QString email);
+    Controlador *m_controlador;
     QMap<QString,QString> usuarios;
 };
 

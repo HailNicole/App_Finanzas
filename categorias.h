@@ -2,7 +2,7 @@
 #define CATEGORIAS_H
 
 #include <QDialog>
-#include "agregar_categorias.h"
+#include <QWidget>
 
 namespace Ui {
 class Categorias;
@@ -17,9 +17,13 @@ public:
     ~Categorias();
 
 private slots:
-    void on_buttonBox_accepted();
+    void on_btn_agrcat_clicked();
 
-    void on_buttonBox_rejected();
+    void on_btn_cancat_clicked();
+
+    void on_btn_borrarcat_clicked();
+
+    void on_btn_editcat_clicked();
 
 private:
     Ui::Categorias *ui;

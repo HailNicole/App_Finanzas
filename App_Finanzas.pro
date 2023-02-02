@@ -13,9 +13,11 @@ SOURCES += \
     agregar_categorias.cpp \
     agregar_miembros.cpp \
     categorias.cpp \
+    controlador.cpp \
     main.cpp \
     login.cpp \
     miembros.cpp \
+    persona_miembro.cpp \
     principal.cpp \
     registrar_usuario.cpp
 
@@ -24,8 +26,10 @@ HEADERS += \
     agregar_categorias.h \
     agregar_miembros.h \
     categorias.h \
+    controlador.h \
     login.h \
     miembros.h \
+    persona_miembro.h \
     principal.h \
     registrar_usuario.h
 

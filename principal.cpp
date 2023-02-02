@@ -1,5 +1,4 @@
 #include "principal.h"
-#include "categorias.h"
 #include "ui_principal.h"
 
 Principal::Principal(QWidget *parent) :
@@ -56,6 +55,5 @@ void Principal::on_actionRegistrar_triggered()
 bool Principal::entrar()
 {
     //login log;
-
 }
 

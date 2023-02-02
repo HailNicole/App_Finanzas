@@ -7,7 +7,7 @@
 #include "miembros.h"
 #include "categorias.h"
 #include "login.h"
-#include "registrar_usuario.h"
+#include "controlador.h"
 
 #define VERSION "0.2"
 namespace Ui {
@@ -33,6 +33,7 @@ private slots:
 
 private:
     Ui::Principal *ui;
+    Controlador *m_controlador;
     bool entrar();
 };
 

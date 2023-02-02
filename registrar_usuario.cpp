@@ -21,21 +21,13 @@ void Registrar_usuario::on_buttonBox_accepted()
     QString email=ui->in_regusuario->text();
     QString contrasenia=ui->in_regcontra->text();
 
-    if(!validar_email(email) || contrasenia.isEmpty()){
+    if(!m_controlador->validar_email(email) || contrasenia.isEmpty()){
         QMessageBox::information(this, "Error", "Datos Erróneos o Incompletos");
         return;
     }
     //Estructura map donde guarda una llave asociada a un valor
     usuarios.insert(email,contrasenia);
     accept();
-}
-bool Registrar_usuario::validar_email(QString email)
-{
-    if(email.isEmpty()){
-        return false;
-    }
-      QRegExp pattern ("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
-      return pattern.exactMatch(email);
 }
 
 QMap<QString, QString> Registrar_usuario::getUsuarios() const
