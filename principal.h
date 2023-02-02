@@ -31,6 +31,8 @@ private slots:
 
     void on_actionRegistrar_triggered();
 
+    void on_actionSalir_triggered();
+
 private:
     Ui::Principal *ui;
     Controlador *m_controlador;

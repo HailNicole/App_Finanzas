@@ -61,3 +61,9 @@ bool Principal::acceso()
     return false;
 }
 
+
+void Principal::on_actionSalir_triggered()
+{
+    this->close();
+}
+

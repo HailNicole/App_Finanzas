@@ -6,6 +6,12 @@
         <file>recursos/safe home.png</file>
         <file>recursos/goma-de-borrar.png</file>
         <file>recursos/firma.png</file>
+        <file>recursos/familia.png</file>
+        <file>recursos/educacion.png</file>
+        <file>recursos/diagrama.png</file>
+        <file>recursos/categorias.png</file>
+        <file>recursos/boton.png</file>
+        <file>recursos/acerca-de.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

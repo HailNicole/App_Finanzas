@@ -17,6 +17,7 @@ SOURCES += \
     controlador.cpp \
     main.cpp \
     miembros.cpp \
+    objeto_categoria.cpp \
     persona_miembro.cpp \
     principal.cpp \
     registrar_usuario.cpp
@@ -29,6 +30,7 @@ HEADERS += \
     categorias.h \
     controlador.h \
     miembros.h \
+    objeto_categoria.h \
     persona_miembro.h \
     principal.h \
     registrar_usuario.h

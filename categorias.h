@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include <QWidget>
+#include "agregar_categorias.h"
+#include <QMessageBox>
 
 namespace Ui {
 class Categorias;
@@ -27,6 +29,10 @@ private slots:
 
 private:
     Ui::Categorias *ui;
+    enum Columna
+    {
+        ID, TIPO
+    };
 };
 
 #endif // CATEGORIAS_H
