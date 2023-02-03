@@ -1,5 +1,5 @@
 #include "objeto_categoria.h"
-
+#include "QDebug"
 Objeto_categoria::Objeto_categoria(QObject *parent)
     : QObject{parent}
 {
@@ -21,9 +21,19 @@ const int &Objeto_categoria::id() const
     return m_id;
 }
 
+const QString &Objeto_categoria::tipo2() const
+{
+    return m_tipo2;
+}
+
 void Objeto_categoria::setTipo(Tipo_categoria newTipo)
 {
     m_tipo = newTipo;
+}
+
+void Objeto_categoria::setTipo2(QString newTipo2)
+{
+    m_tipo2 = newTipo2;
 }
 
 void Objeto_categoria::setId(int newId)
@@ -53,7 +63,7 @@ QString Objeto_categoria::Tipo_String()
         return tr("Personales");
         break;
     case Tipo_categoria::Otros:
-        return tr(" ");
+        return tipo2();
         break;
     default:
         return "";

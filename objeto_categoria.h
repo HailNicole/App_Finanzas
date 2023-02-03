@@ -23,16 +23,20 @@ public:
 
     const Tipo_categoria &tipo() const;
     const int &id() const;
+    const QString &tipo2() const;
 
     void setTipo(Tipo_categoria newTipo);
+    void setTipo2(QString newTipo2);
     void setId(int newId);
     QString Tipo_String();
+
+
 signals:
 
 private:
     int m_id;
     Tipo_categoria m_tipo;
-
+    QString m_tipo2;
 };
 
 #endif // OBJETO_CATEGORIA_H
