@@ -120,7 +120,7 @@ void Miembros::on_btn_guardar_clicked()
     // Verificar que exista datos para guardar
     int filas = ui->tblLista->rowCount();
     if (filas == 0){
-        QMessageBox::warning(0,"Guardar contactos","Agenda sin datos para guardar");
+        QMessageBox::warning(this,"Guardar contactos","Agenda sin datos para guardar");
         return;
     }
 
@@ -166,4 +166,3 @@ void Miembros::cargarFamiliares()
         arc.close();
     }
 }
-

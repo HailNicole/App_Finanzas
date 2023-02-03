@@ -27,12 +27,16 @@ private slots:
 
     void on_btn_editcat_clicked();
 
+    void on_btn_guardarcat_clicked();
+
 private:
     Ui::Categorias *ui;
+    const QString ARCHIVO2 = "categorias.csv";
     enum Columna
     {
         ID, TIPO
     };
+    void cargarCategorias();
 };
 
 #endif // CATEGORIAS_H

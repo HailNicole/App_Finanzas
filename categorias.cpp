@@ -12,6 +12,7 @@ Categorias::Categorias(QWidget *parent) :
     QStringList titulo;
     titulo <<"ID" << "Tipo";
     ui->tblLista_cat->setHorizontalHeaderLabels(titulo);
+    cargarCategorias();
 }
 
 Categorias::~Categorias()
@@ -114,4 +115,56 @@ void Categorias::on_btn_editcat_clicked()
          ui->tblLista_cat->setItem(row, TIPO, new QTableWidgetItem(tp_str));
     }
 }
+
+
+void Categorias::on_btn_guardarcat_clicked()
+{
+    // Verificar que exista datos para guardar
+    int filas = ui->tblLista_cat->rowCount();
+    if (filas == 0){
+        QMessageBox::warning(this,"Guardar Categorias","Agenda sin datos para guardar");
+        return;
+    }
+
+    // Abrir el archivo y guardar
+    QFile archivo2(ARCHIVO2);
+    if (archivo2.open(QFile::WriteOnly | QFile::Truncate)) {
+        QTextStream salida(&archivo2);
+        for (int i=0; i<filas; i++) {
+            QTableWidgetItem *id = ui->tblLista_cat->item(i, ID);
+            QTableWidgetItem *tipo = ui->tblLista_cat->item(i, TIPO);
+            salida << id->text() << ";" << tipo->text() << "\n";
+        }
+        archivo2.close();
+        QMessageBox::information(this,"Guardar Categorias","Datos guardados con éxito");
+    }else{
+        QMessageBox::critical(this,"Guardar Categorias", "No se puede escribir sobre " + ARCHIVO2);
+    }
+}
+
+void Categorias::cargarCategorias()
+{
+    // Verificar si el archivo existe
+    QFile arc(ARCHIVO2);
+    if (!arc.exists())
+        return;
+
+    // cargar datos
+    if (arc.open(QFile::ReadOnly)) {
+        QTextStream entrada(&arc);
+        int fila;
+        while(!entrada.atEnd()){
+            QString linea = entrada.readLine();
+            QStringList datos = linea.split(";");
+            //Agregar a la tabla
+            fila = ui->tblLista_cat->rowCount();
+            ui->tblLista_cat->insertRow(fila);
+            ui->tblLista_cat->setItem(fila, ID, new QTableWidgetItem(datos[ID]));
+            ui->tblLista_cat->setItem(fila, TIPO, new QTableWidgetItem(datos[TIPO]));
+        }
+        arc.close();
+    }
+}
+
+
 
