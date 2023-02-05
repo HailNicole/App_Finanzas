@@ -1,13 +1,14 @@
 #ifndef REPORTES_H
 #define REPORTES_H
 
+#include "qdialog.h"
 #include <QWidget>
 
 namespace Ui {
 class Reportes;
 }
 
-class Reportes : public QWidget
+class Reportes : public QDialog
 {
     Q_OBJECT
 

@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     acceso.cpp \
     acerca_de.cpp \
+    admin.cpp \
     agregar_categorias.cpp \
     agregar_miembros.cpp \
     categorias.cpp \
@@ -23,11 +24,13 @@ SOURCES += \
     principal.cpp \
     registrar_usuario.cpp \
     registro.cpp \
-    reportes.cpp
+    reportes.cpp \
+    usuarios_admin.cpp
 
 HEADERS += \
     acceso.h \
     acerca_de.h \
+    admin.h \
     agregar_categorias.h \
     agregar_miembros.h \
     categorias.h \
@@ -39,11 +42,13 @@ HEADERS += \
     principal.h \
     registrar_usuario.h \
     registro.h \
-    reportes.h
+    reportes.h \
+    usuarios_admin.h
 
 FORMS += \
     acceso.ui \
     acerca_de.ui \
+    admin.ui \
     agregar_categorias.ui \
     agregar_miembros.ui \
     categorias.ui \
@@ -51,7 +56,8 @@ FORMS += \
     principal.ui \
     registrar_usuario.ui \
     registro.ui \
-    reportes.ui
+    reportes.ui \
+    usuarios_admin.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

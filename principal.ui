@@ -39,6 +39,7 @@
     <addaction name="separator"/>
     <addaction name="actionReporte"/>
     <addaction name="separator"/>
+    <addaction name="actionAdministrador"/>
     <addaction name="actionSalir"/>
    </widget>
    <widget class="QMenu" name="menuAcerca_de">
@@ -65,6 +66,7 @@
    <addaction name="actionCategorias"/>
    <addaction name="actionRegistrar"/>
    <addaction name="actionReporte"/>
+   <addaction name="actionAdministrador"/>
    <addaction name="actionSalir"/>
   </widget>
   <action name="actionMiembros">
@@ -125,6 +127,15 @@
    </property>
    <property name="iconText">
     <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionAdministrador">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/imagen/recursos/gerente.png</normaloff>:/imagen/recursos/gerente.png</iconset>
+   </property>
+   <property name="text">
+    <string>Administrador</string>
    </property>
   </action>
  </widget>

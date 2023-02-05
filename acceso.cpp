@@ -6,7 +6,9 @@ Acceso::Acceso(QWidget *parent) :
     ui(new Ui::Acceso)
 {
     ui->setupUi(this);
+    qDebug()<<usuarios2.size();
     cargarUsuarios();
+    qDebug()<<usuarios2.size();
 }
 
 Acceso::~Acceso()
@@ -46,6 +48,7 @@ void Acceso::on_btn_Registrar_clicked()
                 i.next();
                 usuarios2.insert(i.key(), i.value());
         }
+        qDebug()<<usuarios2;
         m_controlador->Guardar_U(usuarios2);
 }
 
@@ -55,14 +58,14 @@ void Acceso::cargarUsuarios()
    QFile archivo(tr("registro_usuarios.csv"));
     if (!archivo.exists())
         return;
-
     // cargar datos
     if (archivo.open(QFile::ReadOnly)) {
         QTextStream entrada(&archivo);
         while(!entrada.atEnd()){
             QString linea = entrada.readLine();
             QStringList datos = linea.split(";");
-             usuarios2.insert(datos[USUARIO],datos[CONTRASENIA]);
+            qDebug()<<datos;
+            usuarios2.insert(datos[USUARIO],datos[CONTRASENIA]);
         }
         archivo.close();
     }

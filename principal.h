@@ -9,6 +9,8 @@
 #include "controlador.h"
 #include "acceso.h"
 #include "registro.h"
+#include "reportes.h"
+#include "admin.h"
 
 #define VERSION "0.2"
 namespace Ui {
@@ -33,6 +35,10 @@ private slots:
     void on_actionRegistrar_triggered();
 
     void on_actionSalir_triggered();
+
+    void on_actionReporte_triggered();
+
+    void on_actionAdministrador_triggered();
 
 private:
     Ui::Principal *ui;

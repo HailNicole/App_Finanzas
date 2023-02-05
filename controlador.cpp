@@ -40,7 +40,7 @@ void Controlador::Guardar_U(QMap<QString, QString> usr)
 {
     QFile usuario("registro_usuarios.csv");
     QTextStream io;
-    usuario.open(QIODevice::WriteOnly | QIODevice::Append);
+    usuario.open(QIODevice::WriteOnly | QIODevice::Truncate);
     io.setDevice(&usuario);
     QMapIterator<QString, QString> i(usr);
     while (i.hasNext())
@@ -49,6 +49,21 @@ void Controlador::Guardar_U(QMap<QString, QString> usr)
         io<< i.key() << ";" << i.value() << "\n";
     }
     usuario.close();
+}
+
+void Controlador::Guardar_Admin(QMap<QString, QString> usr)
+{
+    QFile admin("admin.csv");
+    QTextStream io;
+    admin.open(QIODevice::WriteOnly | QIODevice::Append);
+    io.setDevice(&admin);
+    QMapIterator<QString, QString> i(usr);
+    while (i.hasNext())
+    {
+        i.next();
+        io<< i.key() << ";" << i.value() << "\n";
+    }
+    admin.close();
 }
 
 void Controlador::Guardar_R()
@@ -83,6 +98,11 @@ void Controlador::crear_archivo()
         QFile mf("familiares.csv");
         mf.open(QIODevice::ReadWrite | QIODevice::Text);
         mf.close();
+    }
+    if(!QFile("admin.csv").exists()){
+        QFile admin("familiares.csv");
+        admin.open(QIODevice::ReadWrite | QIODevice::Text);
+        admin.close();
     }
 }
 

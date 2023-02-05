@@ -64,9 +64,23 @@ bool Principal::acceso()
     return false;
 }
 
+void Principal::on_actionReporte_triggered()
+{
+    Reportes *reporte = new Reportes(this);
+    this->hide();
+    reporte->exec();
+    this->show();
+}
 
 void Principal::on_actionSalir_triggered()
 {
     this->close();
+}
+
+void Principal::on_actionAdministrador_triggered()
+{
+    this->hide();
+    Admin *admin = new Admin(this);
+    admin->show();
 }
 

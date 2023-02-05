@@ -20,6 +20,7 @@ public:
     void Cargar_Cat(QComboBox *cb);
     void Cargar_Fam(QComboBox *cb2);
     void Guardar_U(QMap<QString, QString> usr);
+    void Guardar_Admin(QMap<QString, QString> usr);
     void Guardar_R();
     void crear_archivo();
     bool validar_email(QString email);

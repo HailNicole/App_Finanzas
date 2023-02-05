@@ -32,7 +32,6 @@ void Registro::on_btnGuardarReg_clicked()
     QString cat = ui->in_categoria->currentText();
     double value = ui->in_valor->value();
 
-
     if(ui->in_ingreso->isChecked()){
         tipo_i = Tipo::Ingreso;
     }else if(ui->in_egreso->isChecked()){
@@ -48,6 +47,8 @@ void Registro::on_btnGuardarReg_clicked()
     }
 
     m_controlador2->setDatos(dia, mb, des, tipo_i, cat, value);
+
+
     //m_controlador2->Guardar_R(dia, mb, des, tipo_i, cat, value);
 }
 
