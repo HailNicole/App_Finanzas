@@ -6,11 +6,11 @@ Categorias::Categorias(QWidget *parent) :
     ui(new Ui::Categorias)
 {
     ui->setupUi(this);
-    setWindowTitle("Categorias");
+    setWindowTitle(tr("Categorias"));
     // Configurar la tabla
     ui->tblLista_cat->setColumnCount(2);
     QStringList titulo;
-    titulo <<"ID" << "Tipo";
+    titulo <<tr("ID") << tr("Tipo");
     ui->tblLista_cat->setHorizontalHeaderLabels(titulo);
     cargarCategorias();
 }
@@ -55,7 +55,7 @@ void Categorias::on_btn_borrarcat_clicked()
 {
     QList<QModelIndex>big = ui->tblLista_cat->selectionModel()->selectedRows();
     if(big.isEmpty()){
-        QMessageBox::information(this,"Seleccion","No se ha seleccionado ninguna fila :|");
+        QMessageBox::information(this,tr("Seleccion"),tr("No se ha seleccionado ninguna fila"));
         return;
     }
 
@@ -79,7 +79,7 @@ void Categorias::on_btn_editcat_clicked()
     QList<QModelIndex>seleccion = ui->tblLista_cat->selectionModel()->selectedRows();
 
     if(seleccion.isEmpty()){
-        QMessageBox::information(this,"Seleccion","No se ha seleccionado ninguna fila :|");
+        QMessageBox::information(this,tr("Seleccion"),tr("No se ha seleccionado ninguna fila"));
         return;
     }
 
@@ -90,7 +90,7 @@ void Categorias::on_btn_editcat_clicked()
     }
 
     if(cont>1){
-        QMessageBox::information(this,"Seleccion","Seleccione SOLO UNA fila");
+        QMessageBox::information(this,tr("Seleccion"),tr("Seleccione SOLO UNA fila"));
         return;
     }
 
@@ -122,7 +122,7 @@ void Categorias::on_btn_guardarcat_clicked()
     // Verificar que exista datos para guardar
     int filas = ui->tblLista_cat->rowCount();
     if (filas == 0){
-        QMessageBox::warning(this,"Guardar Categorias","Agenda sin datos para guardar");
+        QMessageBox::warning(this,tr("Guardar Categorias"),tr("Sin datos para guardar"));
         return;
     }
 
@@ -136,9 +136,9 @@ void Categorias::on_btn_guardarcat_clicked()
             salida << id->text() << ";" << tipo->text() << "\n";
         }
         archivo2.close();
-        QMessageBox::information(this,"Guardar Categorias","Datos guardados con éxito");
+        QMessageBox::information(this,tr("Guardar Categorias"),tr("Datos guardados con éxito"));
     }else{
-        QMessageBox::critical(this,"Guardar Categorias", "No se puede escribir sobre " + ARCHIVO2);
+        QMessageBox::critical(this,tr("Guardar Categorias"), tr("No se puede escribir sobre ") + ARCHIVO2);
     }
 }
 

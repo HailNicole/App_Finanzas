@@ -32,12 +32,12 @@ void Agregar_Categorias::on_buttonBox_accepted()
         tipo = Tipo_categoria::Otros;
         value_tipo2=ui->in_otro->text();
         if(value_tipo2.isEmpty()){
-            QMessageBox::information(this, "Error", "Por favor llene la casilla");
+            QMessageBox::information(this, tr("Error"), tr("Por favor llene la casilla"));
             return;
         }
         setBandera(true);
     }else{
-        QMessageBox::information(this, "Error", "Seleccione al menos una opción");
+        QMessageBox::information(this, tr("Error"), tr("Seleccione al menos una opción"));
         return;
     }
     accept();
@@ -54,7 +54,7 @@ void Agregar_Categorias::on_in_otro_editingFinished()
     QString txt = ui->in_otro->text();
     if(!m_controlador->validar_texto(txt)){
         ui->in_otro->setStyleSheet("background-color: rgb(255, 105, 180)");
-        QMessageBox::information(this, "Error", "Solo se permiten letras");
+        QMessageBox::information(this, tr("Error"), tr("Solo se permiten letras"));
     }
     else{
         ui->in_otro->setStyleSheet("background-color: rgb(153, 193, 241)");
@@ -73,7 +73,6 @@ Objeto_categoria *Agregar_Categorias::categoria() const
 
 QString Agregar_Categorias::getValue_tipo2() const
 {
-    //m_categoria->setTipo2(value_tipo2);
     return value_tipo2;
 }
 

@@ -17,17 +17,13 @@ public:
     explicit Acceso(QWidget *parent = nullptr);
     ~Acceso();
     bool getBandera() const;
-
     void setBandera(bool newBandera);
 
 private slots:
-
     bool on_btn_Ingresar_clicked();
     void on_btn_Registrar_clicked();
-
 private:
     Ui::Acceso *ui;
-    const QString ARCHIVO = "registros.csv";
     QMap<QString,QString> usuarios2;
     void cargarUsuarios();
     Controlador *m_controlador;

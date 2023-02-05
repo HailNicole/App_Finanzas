@@ -12,3 +12,16 @@ Registro::~Registro()
 {
     delete ui;
 }
+
+void Registro::on_btn_SalirREg_clicked()
+{
+    this->close();
+}
+
+
+void Registro::on_btnGuardarReg_clicked()
+{
+
+    Objeto_registro *registro = new Objeto_registro();
+}
+

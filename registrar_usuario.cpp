@@ -8,7 +8,7 @@ Registrar_usuario::Registrar_usuario(QWidget *parent) :
     ui(new Ui::Registrar_usuario)
 {
     ui->setupUi(this);
-    setWindowTitle("Registrar");
+    setWindowTitle(tr("Registrar"));
 }
 
 Registrar_usuario::~Registrar_usuario()
@@ -22,7 +22,7 @@ void Registrar_usuario::on_buttonBox_accepted()
     QString contrasenia=ui->in_regcontra->text();
 
     if(!m_controlador->validar_email(email) || contrasenia.isEmpty()){
-        QMessageBox::information(this, "Error", "Datos Erróneos o Incompletos");
+        QMessageBox::information(this, tr("Error"), tr("Datos Erróneos o Incompletos"));
         return;
     }
     //Estructura map donde guarda una llave asociada a un valor

@@ -35,36 +35,24 @@ bool Acceso::on_btn_Ingresar_clicked()
 void Acceso::on_btn_Registrar_clicked()
 {
     Registrar_usuario *reg = new Registrar_usuario(this);
-        reg->setWindowTitle("Registrar Usuario");
+        reg->setWindowTitle(tr("Registrar Usuario"));
         int res = reg->exec();
         if (res == QDialog::Rejected){
             return;
         }
+
         if(!reg->getUsuarios().isEmpty()){
             QMapIterator<QString, QString> i(reg->getUsuarios());
                 i.next();
                 usuarios2.insert(i.key(), i.value());
         }
-
-        QFile archivo(ARCHIVO);
-        if (archivo.open(QFile::WriteOnly | QFile::Truncate)) {
-            QTextStream salida(&archivo);
-            QMapIterator<QString, QString> i(usuarios2);
-            while (i.hasNext())
-            {
-                i.next();
-                salida << i.key() << ";" << i.value() << "\n";
-            }
-            archivo.close();
-        }else{
-            QMessageBox::critical(this,"Guardar Usuario", "No se puede escribir sobre " + ARCHIVO);
-        }
+        m_controlador->Guardar_U(usuarios2);
 }
 
 void Acceso::cargarUsuarios()
 {
     // Verificar si el archivo existe
-   QFile archivo(ARCHIVO);
+   QFile archivo(tr("registro_usuarios.csv"));
     if (!archivo.exists())
         return;
 
@@ -74,7 +62,7 @@ void Acceso::cargarUsuarios()
         while(!entrada.atEnd()){
             QString linea = entrada.readLine();
             QStringList datos = linea.split(";");
-            usuarios2.insert(datos[USUARIO],datos[CONTRASENIA]);
+             usuarios2.insert(datos[USUARIO],datos[CONTRASENIA]);
         }
         archivo.close();
     }

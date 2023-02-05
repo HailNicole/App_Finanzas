@@ -6,12 +6,12 @@ Agregar_Miembros::Agregar_Miembros(QWidget *parent) :
     ui(new Ui::Agregar_Miembros)
 {
     ui->setupUi(this);
-    ui->in_rol->addItem("Papá");
-    ui->in_rol->addItem("Mamá");
-    ui->in_rol->addItem("Hijo");
-    ui->in_rol->addItem("Hija");
-    ui->in_rol->addItem("Otro");
-    setWindowTitle("Agregar Miembro");
+    ui->in_rol->addItem(tr("Papá"));
+    ui->in_rol->addItem(tr("Mamá"));
+    ui->in_rol->addItem(tr("Hijo"));
+    ui->in_rol->addItem(tr("Hija"));
+    ui->in_rol->addItem(tr("Otro"));
+    setWindowTitle(tr("Agregar Miembro"));
 }
 
 void Agregar_Miembros::set_datos(QString nom, QString ape, QString rol)
@@ -40,7 +40,7 @@ void Agregar_Miembros::on_buttonBox_accepted()
     QString rol = ui->in_rol->currentText();
 
     if(!m_controlador->validar_texto(nombre) || !m_controlador->validar_texto(apellido)){
-        QMessageBox::information(this, "Error", "Datos Erróneos o Incompletos");
+        QMessageBox::information(this, tr("Error"), tr("Datos Erróneos o Incompletos"));
         return;
     }
     this->m_persona = new Persona_miembro(nombre, apellido, rol);

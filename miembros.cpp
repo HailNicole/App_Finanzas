@@ -8,11 +8,11 @@ Miembros::Miembros(QWidget *parent) :
     ui(new Ui::Miembros)
 {
     ui->setupUi(this);
-    setWindowTitle("Miembros de la Familia");
+    setWindowTitle(tr("Miembros de la Familia"));
     // Configurar la tabla
     ui->tblLista->setColumnCount(3);
     QStringList titulo;
-    titulo << "Nombre" << "Apellido" << "Rol";
+    titulo << tr("Nombre") << tr("Apellido") << tr("Rol");
     ui->tblLista->setHorizontalHeaderLabels(titulo);
     cargarFamiliares();
 }
@@ -26,7 +26,7 @@ void Miembros::on_btn_agregar_clicked()
 {
     // Crear y mostrar el dialogo
     Agregar_Miembros agr(this);
-    agr.setWindowTitle("Agregar Familiar");
+    agr.setWindowTitle(tr("Agregar Familiar"));
     // Abrir la ventana y evaluar respuesta
     int res = agr.exec();
     if (res == QDialog::Rejected){
@@ -46,7 +46,7 @@ void Miembros::on_btn_borrar_clicked()
 {
     QList<QModelIndex>big = ui->tblLista->selectionModel()->selectedRows();
     if(big.isEmpty()){
-        QMessageBox::information(this,"Seleccion","No se ha seleccionado ninguna fila :|");
+        QMessageBox::information(this,tr("Seleccion"),tr("No se ha seleccionado ninguna fila"));
         return;
     }
 
@@ -70,7 +70,7 @@ void Miembros::on_btn_editar_clicked()
     QList<QModelIndex>seleccion = ui->tblLista->selectionModel()->selectedRows();
 
     if(seleccion.isEmpty()){
-        QMessageBox::information(this,"Seleccion","No se ha seleccionado ninguna fila :|");
+        QMessageBox::information(this,tr("Seleccion"),tr("No se ha seleccionado ninguna fila"));
         return;
     }
 
@@ -81,7 +81,7 @@ void Miembros::on_btn_editar_clicked()
     }
 
     if(cont>1){
-        QMessageBox::information(this,"Seleccion","Seleccione SOLO UNA fila");
+        QMessageBox::information(this,tr("Seleccion"),tr("Seleccione SOLO UNA fila"));
         return;
     }
 
@@ -92,7 +92,7 @@ void Miembros::on_btn_editar_clicked()
     QTableWidgetItem *rol = ui->tblLista->item(row, ROL);
 
     Agregar_Miembros agr(this);
-    agr.setWindowTitle("Agregar Familiar");
+    agr.setWindowTitle(tr("Agregar Familiar"));
 
     agr.set_datos(nombre->text(), apellido->text(), rol->text());
 
@@ -120,7 +120,7 @@ void Miembros::on_btn_guardar_clicked()
     // Verificar que exista datos para guardar
     int filas = ui->tblLista->rowCount();
     if (filas == 0){
-        QMessageBox::warning(this,"Guardar contactos","Agenda sin datos para guardar");
+        QMessageBox::warning(this,tr("Guardar contactos"),tr("Sin datos para guardar"));
         return;
     }
 
@@ -136,9 +136,9 @@ void Miembros::on_btn_guardar_clicked()
             salida << rol->text()<< "\n";
         }
         archivo.close();
-        QMessageBox::information(this,"Guardar contactos","Contactos guardados con éxito");
+        QMessageBox::information(this,tr("Guardar Datos"),tr("Datos guardados con éxito"));
     }else{
-        QMessageBox::critical(this,"Guardar contactos", "No se puede escribir sobre " + ARCHIVO1);
+        QMessageBox::critical(this,tr("Guardar Datos"), tr("No se puede escribir sobre ") + ARCHIVO1);
     }
 }
 

@@ -29,8 +29,6 @@ public:
     void setTipo2(QString newTipo2);
     void setId(int newId);
     QString Tipo_String();
-
-
 signals:
 
 private:

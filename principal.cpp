@@ -20,7 +20,7 @@ void Principal::on_actionAcerca_de_triggered()
 {
     // Crear un objeto del cuadro de diálogo
     Acerca_de *dialog = new Acerca_de(this);
-    dialog->setWindowTitle("Acerca De");
+    dialog->setWindowTitle(tr("Acerca De"));
     // Enviar datos a la otra ventana
     dialog->setVersion(VERSION);
     // Mostrar la venta en modo MODAL
