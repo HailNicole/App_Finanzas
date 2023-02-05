@@ -30,7 +30,6 @@ private slots:
 
 private:
     Ui::Miembros *ui;
-    const QString ARCHIVO1 = "familiares.csv";
     enum Columna
     {
         NOMBRE, APELLIDO, ROL

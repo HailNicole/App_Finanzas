@@ -8,6 +8,7 @@
 #include "categorias.h"
 #include "controlador.h"
 #include "acceso.h"
+#include "registro.h"
 
 #define VERSION "0.2"
 namespace Ui {

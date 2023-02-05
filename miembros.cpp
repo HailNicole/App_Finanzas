@@ -125,7 +125,7 @@ void Miembros::on_btn_guardar_clicked()
     }
 
     // Abrir el archivo y guardar
-    QFile archivo(ARCHIVO1);
+    QFile archivo("familiares.csv");
     if (archivo.open(QFile::WriteOnly | QFile::Truncate)) {
         QTextStream salida(&archivo);
         for (int i=0; i<filas; i++) {
@@ -138,14 +138,14 @@ void Miembros::on_btn_guardar_clicked()
         archivo.close();
         QMessageBox::information(this,tr("Guardar Datos"),tr("Datos guardados con éxito"));
     }else{
-        QMessageBox::critical(this,tr("Guardar Datos"), tr("No se puede escribir sobre ") + ARCHIVO1);
+        QMessageBox::critical(this,tr("Guardar Datos"), tr("No se puede escribir sobre ") + tr("familiares.csv"));
     }
 }
 
 void Miembros::cargarFamiliares()
 {
     // Verificar si el archivo existe
-    QFile arc(ARCHIVO1);
+    QFile arc("familiares.csv");
     if (!arc.exists())
         return;
 

@@ -47,7 +47,10 @@ void Principal::on_actionCategorias_triggered()
 
 void Principal::on_actionRegistrar_triggered()
 {
-
+    Registro *reg = new Registro(this);
+    this->hide();
+    reg->exec();
+    this->show();
 }
 
 bool Principal::acceso()

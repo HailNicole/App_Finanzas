@@ -57,7 +57,7 @@
     <item>
      <widget class="QPushButton" name="btn_cancat">
       <property name="text">
-       <string>Cancelar</string>
+       <string>Atrás</string>
       </property>
      </widget>
     </item>

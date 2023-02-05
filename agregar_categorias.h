@@ -5,6 +5,7 @@
 #include "objeto_categoria.h"
 #include <QMessageBox>
 #include "controlador.h"
+#include "qlineedit.h"
 
 namespace Ui {
 class Agregar_Categorias;
@@ -45,11 +46,11 @@ private slots:
 
 private:
     Ui::Agregar_Categorias *ui;
-    Objeto_categoria *m_categoria;
     Tipo_categoria tipo;
     QString value_tipo2;
     bool bandera;
     Controlador *m_controlador;
+    QLineEdit *line;
 };
 
 #endif // AGREGAR_CATEGORIAS_H

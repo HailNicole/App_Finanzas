@@ -22,7 +22,8 @@ SOURCES += \
     persona_miembro.cpp \
     principal.cpp \
     registrar_usuario.cpp \
-    registro.cpp
+    registro.cpp \
+    reportes.cpp
 
 HEADERS += \
     acceso.h \
@@ -37,7 +38,8 @@ HEADERS += \
     persona_miembro.h \
     principal.h \
     registrar_usuario.h \
-    registro.h
+    registro.h \
+    reportes.h
 
 FORMS += \
     acceso.ui \
@@ -48,7 +50,8 @@ FORMS += \
     miembros.ui \
     principal.ui \
     registrar_usuario.ui \
-    registro.ui
+    registro.ui \
+    reportes.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

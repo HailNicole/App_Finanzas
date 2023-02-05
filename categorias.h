@@ -31,7 +31,6 @@ private slots:
 
 private:
     Ui::Categorias *ui;
-    const QString ARCHIVO2 = "categorias.csv";
     enum Columna
     {
         ID, TIPO

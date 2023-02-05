@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    Acceso w;
+    Principal w;
     w.show();
     /*
     if(w.acceso()){

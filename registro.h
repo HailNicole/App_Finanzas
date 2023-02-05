@@ -2,16 +2,15 @@
 #define REGISTRO_H
 
 #include <QWidget>
+#include <QMessageBox>
 #include "objeto_registro.h"
 #include "controlador.h"
-#include "categorias.h"
-#include "objeto_categoria.h"
 
 namespace Ui {
 class Registro;
 }
 
-class Registro : public QWidget
+class Registro : public QDialog
 {
     Q_OBJECT
 
@@ -23,12 +22,14 @@ private slots:
     void on_btn_SalirREg_clicked();
     void on_btnGuardarReg_clicked();
 
+    void on_btn_limpiar_clicked();
+
 private:
     Ui::Registro *ui;
     Tipo tipo_i;
     Controlador *m_controlador2;
-    void cargar_miembros();
-    void cargar_categoria();
+    QComboBox *combo1, *combo2;
+    void limpiar();
 };
 
 #endif // REGISTRO_H

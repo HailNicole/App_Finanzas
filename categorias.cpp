@@ -28,14 +28,24 @@ void Categorias::on_btn_agrcat_clicked()
     if (res == QDialog::Rejected){
         return;
     }
+
     //Agregar a la tabla
     int fila = ui->tblLista_cat->rowCount();
 
     Tipo_categoria tp = agr_cat.getTipo();
     Objeto_categoria *cat = new Objeto_categoria(fila+1, tp);
     QString tp_str = cat->Tipo_String();
+
+    for(int i=0; i<fila; i++){
+        QTableWidgetItem *tipo = ui->tblLista_cat->item(i, TIPO);
+        if(tp_str == tipo->text() || agr_cat.getValue_tipo2() == tipo->text()){
+            QMessageBox::information(this,tr("Agregar Categoria"),tr("No se permiten elementos repetido en la tabla"));
+            return;
+        }
+    }
     ui->tblLista_cat->insertRow(fila);
     ui->tblLista_cat->setItem(fila, ID, new QTableWidgetItem(QString::number(cat->id())));
+
     if(agr_cat.getBandera()){
         cat->setTipo2(agr_cat.getValue_tipo2());
         ui->tblLista_cat->setItem(fila, TIPO, new QTableWidgetItem(cat->tipo2()));
@@ -123,7 +133,7 @@ void Categorias::on_btn_guardarcat_clicked()
     }
 
     // Abrir el archivo y guardar
-    QFile archivo2(ARCHIVO2);
+    QFile archivo2("categorias.csv");
     if (archivo2.open(QFile::WriteOnly | QFile::Truncate)) {
         QTextStream salida(&archivo2);
         for (int i=0; i<filas; i++) {
@@ -134,20 +144,20 @@ void Categorias::on_btn_guardarcat_clicked()
         archivo2.close();
         QMessageBox::information(this,tr("Guardar Categorias"),tr("Datos guardados con éxito"));
     }else{
-        QMessageBox::critical(this,tr("Guardar Categorias"), tr("No se puede escribir sobre ") + ARCHIVO2);
+        QMessageBox::critical(this,tr("Guardar Categorias"), tr("No se puede escribir sobre ") + tr("categorias.csv"));
     }
 }
 
 void Categorias::cargarCategorias()
 {
     // Verificar si el archivo existe
-    QFile arc(ARCHIVO2);
-    if (!arc.exists())
+    QFile arc2("categorias.csv");
+    if (!arc2.exists())
         return;
 
     // cargar datos
-    if (arc.open(QFile::ReadOnly)) {
-        QTextStream entrada(&arc);
+    if (arc2.open(QFile::ReadOnly)) {
+        QTextStream entrada(&arc2);
         int fila;
         while(!entrada.atEnd()){
             QString linea = entrada.readLine();
@@ -158,6 +168,6 @@ void Categorias::cargarCategorias()
             ui->tblLista_cat->setItem(fila, ID, new QTableWidgetItem(datos[ID]));
             ui->tblLista_cat->setItem(fila, TIPO, new QTableWidgetItem(datos[TIPO]));
         }
-        arc.close();
+        arc2.close();
     }
 }

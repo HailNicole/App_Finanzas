@@ -8,6 +8,7 @@ Agregar_Categorias::Agregar_Categorias(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowTitle("Agregar Categoria");
+    line = ui->in_otro;
 }
 
 Agregar_Categorias::~Agregar_Categorias()
@@ -31,7 +32,7 @@ void Agregar_Categorias::on_buttonBox_accepted()
         tipo = Tipo_categoria::Personales;
     }else if(ui->r_otro->isChecked()){
         tipo = Tipo_categoria::Otros;
-        value_tipo2=ui->in_otro->text();
+        value_tipo2=line->text();
         if(value_tipo2.isEmpty()){
             QMessageBox::information(this, tr("Error"), tr("Por favor llene la casilla"));
             return;
@@ -54,22 +55,17 @@ void Agregar_Categorias::on_in_otro_editingFinished()
 {
     QString txt = ui->in_otro->text();
     if(!m_controlador->validar_texto(txt)){
-        ui->in_otro->setStyleSheet("background-color: rgb(255, 105, 180)");
+        line->setStyleSheet("background-color: rgb(255, 105, 180)");
         QMessageBox::information(this, tr("Error"), tr("Solo se permiten letras"));
     }
     else{
-        ui->in_otro->setStyleSheet("background-color: rgb(153, 193, 241)");
+        line->setStyleSheet("background-color: rgb(153, 193, 241)");
     }
 }
 
 Tipo_categoria Agregar_Categorias::getTipo() const
 {
     return tipo;
-}
-
-Objeto_categoria *Agregar_Categorias::categoria() const
-{
-    return m_categoria;
 }
 
 QString Agregar_Categorias::getValue_tipo2() const
@@ -79,43 +75,55 @@ QString Agregar_Categorias::getValue_tipo2() const
 
 void Agregar_Categorias::on_r_otro_pressed()
 {
-    ui->in_otro->setEnabled(true);
+    line->setEnabled(true);
 
 }
 
 void Agregar_Categorias::on_r_sb_clicked()
 {
-    ui->in_otro->setEnabled(false);
+    line->setStyleSheet("background-color: rgb(255, 255, 255)");
+    line->clear();
+    line->setEnabled(false);
 }
 
 
 void Agregar_Categorias::on_r_aca_clicked()
 {
-    ui->in_otro->setEnabled(false);
+    line->setStyleSheet("background-color: rgb(255, 255, 255)");
+    line->clear();
+    line->setEnabled(false);
 }
 
 
 void Agregar_Categorias::on_r_salud_clicked()
 {
-    ui->in_otro->setEnabled(false);
+    line->setStyleSheet("background-color: rgb(255, 255, 255)");
+    line->clear();
+    line->setEnabled(false);
 }
 
 
 void Agregar_Categorias::on_r_arriendo_clicked()
 {
-    ui->in_otro->setEnabled(false);
+    line->setStyleSheet("background-color: rgb(255, 255, 255)");
+    line->clear();
+    line->setEnabled(false);
 }
 
 
 void Agregar_Categorias::on_r_comida_clicked()
 {
-    ui->in_otro->setEnabled(false);
+    line->setStyleSheet("background-color: rgb(255, 255, 255)");
+    line->clear();
+    line->setEnabled(false);
 }
 
 
 void Agregar_Categorias::on_r_pp_clicked()
 {
-    ui->in_otro->setEnabled(false);
+    line->setStyleSheet("background-color: rgb(255, 255, 255)");
+    line->clear();
+    line->setEnabled(false);
 }
 
 bool Agregar_Categorias::getBandera() const
