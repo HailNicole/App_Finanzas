@@ -3,24 +3,7 @@
 
 Controlador::Controlador(QObject *parent) : QObject(parent)
 {
-
-}
-
-void Controlador::Cargar_U(QMap<QString, QString> usr)
-{    
-    QFile usuario("registro_usuarios.csv");
-    QTextStream io;
-    usuario.open(QIODevice::ReadOnly);
-    io.setDevice(&usuario);
-
-    while(!io.atEnd())
-    {
-        QString linea = io.readLine();
-        QStringList datos = linea.split(";");
-        usr.insert(datos[USUARIO],datos[CONTRASENIA]);
-        qDebug()<<usr;
-    }
-    usuario.close();
+    this->m_registro = nullptr;
 }
 
 void Controlador::Guardar_U(QMap<QString, QString> usr)
@@ -45,6 +28,11 @@ void Controlador::crear_archivo()
         QFile usr("registro_usuarios.csv");
         usr.open(QIODevice::ReadWrite | QIODevice::Text);
         usr.close();
+    }
+    if(!QFile("registro_datos.csv").exists()){
+        QFile data("registro_datos.csv");
+        data.open(QIODevice::ReadWrite | QIODevice::Text);
+        data.close();
     }
 }
 
@@ -88,3 +76,9 @@ bool Controlador::entrar(bool validar)
     }
     return true;
 }
+
+void Controlador::setDatos(QString fecha, QString miembro, QString descripcion, Tipo tipo, QString categoria, double valor)
+{
+    this->m_registro = new Objeto_registro(fecha, miembro, descripcion, tipo, categoria, valor);
+}
+

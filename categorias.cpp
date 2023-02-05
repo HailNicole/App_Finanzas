@@ -44,12 +44,10 @@ void Categorias::on_btn_agrcat_clicked()
     }
 }
 
-
 void Categorias::on_btn_cancat_clicked()
 {
     this->close();
 }
-
 
 void Categorias::on_btn_borrarcat_clicked()
 {
@@ -71,7 +69,6 @@ void Categorias::on_btn_borrarcat_clicked()
         ui->tblLista_cat->removeRow(x);
     }
 }
-
 
 void Categorias::on_btn_editcat_clicked()
 {
@@ -115,7 +112,6 @@ void Categorias::on_btn_editcat_clicked()
          ui->tblLista_cat->setItem(row, TIPO, new QTableWidgetItem(tp_str));
     }
 }
-
 
 void Categorias::on_btn_guardarcat_clicked()
 {
@@ -165,6 +161,3 @@ void Categorias::cargarCategorias()
         arc.close();
     }
 }
-
-
-

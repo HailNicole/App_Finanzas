@@ -1,5 +1,6 @@
 #include "objeto_categoria.h"
 #include "QDebug"
+
 Objeto_categoria::Objeto_categoria(QObject *parent)
     : QObject{parent}
 {

@@ -1,6 +1,7 @@
 #include "agregar_categorias.h"
 #include "ui_agregar_categorias.h"
 #include "QDebug"
+
 Agregar_Categorias::Agregar_Categorias(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Agregar_Categorias)
