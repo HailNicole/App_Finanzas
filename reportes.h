@@ -3,6 +3,7 @@
 
 #include "qdialog.h"
 #include <QWidget>
+#include "controlador.h"
 
 namespace Ui {
 class Reportes;
@@ -16,8 +17,16 @@ public:
     explicit Reportes(QWidget *parent = nullptr);
     ~Reportes();
 
+private slots:
+    void on_tabWidget_currentChanged(int index);
+
 private:
     Ui::Reportes *ui;
+    Controlador *m_cont;
+    QComboBox *combo_nom;
+    QPixmap lienzo;
+    void dibujar();
+    void cargar_registro();
 };
 
 #endif // REPORTES_H
