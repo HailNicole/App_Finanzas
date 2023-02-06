@@ -17,11 +17,15 @@ private:
     Objeto_registro *m_registro;
 public:
     explicit Controlador(QObject *parent = nullptr);
+
     void Cargar_Cat(QComboBox *cb);
     void Cargar_Fam(QComboBox *cb2);
+    QString Cargar_Admin(QString *dat);
+
     void Guardar_U(QMap<QString, QString> usr);
     void Guardar_Admin(QMap<QString, QString> usr);
-    void Guardar_R();
+    void Guardar_R(QList<Objeto_registro*> reg);
+
     void crear_archivo();
     bool validar_email(QString email);
     bool validar_texto(QString texto);
@@ -29,6 +33,9 @@ public:
     bool entrar(bool validar);
 
     void setDatos(QString fecha, QString miembro, QString descripcion, Tipo tipo, QString categoria, double valor);
+    QString tipoString();
+    Objeto_registro *registro() const;
+
 signals:
 
 };

@@ -44,33 +44,6 @@ void Usuarios_admin::cargar_cuentas()
     }
 }
 
-void Usuarios_admin::crear_dialog()
-{
-    QDialog *dialog = new QDialog(this);
-    dialog->setWindowModality(Qt::WindowModality::NonModal);
-    dialog->setMinimumWidth(500);
-    dialog->setMaximumHeight(400);
-
-    QLabel *label1 = new QLabel();
-    label1->setText(tr("Confirme su contraseña"));
-    label1->setGeometry(10, 10, 200,50);
-    label1->setParent(dialog);
-
-    QLineEdit *line = new QLineEdit();
-    line->setToolTip("Confirme su contraseña");
-    line->setGeometry(200, 18, 200,30);
-    line->setParent(dialog);
-    line->show();
-
-    QPushButton *button = new QPushButton();
-    button->setText("Confirmar");
-    button->setParent(dialog);
-    button->setGeometry(150, 65, 100,30);
-    button->show();
-
-    dialog->show();
-}
-
 void Usuarios_admin::on_btn_borrarUser_clicked()
 {
     QList<QModelIndex>big = ui->tblAdmin->selectionModel()->selectedRows();
@@ -79,38 +52,57 @@ void Usuarios_admin::on_btn_borrarUser_clicked()
         return;
     }
 
-    QList<int> list;
-    QList<int>::iterator x;
-    QList<QModelIndex>::iterator i;
+    QMessageBox::StandardButton replied;
+    replied = QMessageBox::question(this, "Confirmacion", "Desea borrar esta cuenta permanentemente?",
+            QMessageBox::Yes | QMessageBox::Cancel);
 
-    for (auto &&i : big){
-        list.append(i.row());
-    }
+    if(replied == QMessageBox::Yes){
+        QList<int> list;
+        QList<int>::iterator x;
+        QList<QModelIndex>::iterator i;
 
-    for (auto &&x : list){
-        ui->tblAdmin->removeRow(x);
+        for (auto &&i : big){
+            list.append(i.row());
+        }
+
+        for (auto &&x : list){
+            ui->tblAdmin->removeRow(x);
+        }
+        int filas = ui->tblAdmin->rowCount();
+            for (int i=0; i<filas; i++) {
+                QTableWidgetItem *key = ui->tblAdmin->item(i, Usuario);
+                QTableWidgetItem *value = ui->tblAdmin->item(i, Contrasenia);
+                new_usuarios.insert(key->text(), value->text());
+            }
+        m_controlador->Guardar_U(new_usuarios);
+    }else{
+        return;
     }
 }
-
 
 void Usuarios_admin::on_btn_exit_clicked()
 {
     this->close();
 }
 
-
 void Usuarios_admin::on_btn_elimadmin_clicked()
 {
     QMessageBox::StandardButton reply;
     reply = QMessageBox::question(this, "Confirmacion", "Desea borrar su cuenta de administrador?",
-            QMessageBox::YesToAll | QMessageBox::Cancel);
-    if(reply == QMessageBox::YesToAll){
-        crear_dialog();
-        /*QFile adm(tr("admin.csv"));
-         if (!adm.exists())
-             return;
-         adm.remove();
-         QMessageBox::information(this,tr("Borrar Cuenta Admin"),tr("Su cuenta ha sido borrada exitosamente"));*/
+            QMessageBox::Yes | QMessageBox::Cancel);
+    if(reply == QMessageBox::Yes){
+        Confirmacion confi(this);
+        confi.exec();
+        if(m_controlador->entrar(confi.getFlag())){
+            QFile archivo(tr("admin.csv"));
+                if (!archivo.exists())
+                    return;
+                archivo.remove();
+                QMessageBox::information(this,tr("Borrar Cuenta Admin"),tr("Su cuenta ha sido borrada exitosamente"));
+                this->close();
+        }else{
+            QMessageBox::information(this,tr("Borrar Cuenta Admin"),tr("No se pudo eliminar la cuenta"));
+        }
+
     }
 }
-

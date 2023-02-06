@@ -1,12 +1,11 @@
 #ifndef USUARIOS_ADMIN_H
 #define USUARIOS_ADMIN_H
 
-#include "qdialog.h"
+#include <QDialog>
 #include <QWidget>
-#include "acceso.h"
 #include "controlador.h"
-#include <QLabel>
-#include <QLineEdit>
+#include <QMap>
+#include "confirmacion.h"
 
 namespace Ui {
 class Usuarios_admin;
@@ -22,7 +21,6 @@ public:
 
 private slots:
 
-
     void on_btn_borrarUser_clicked();
 
     void on_btn_exit_clicked();
@@ -35,10 +33,9 @@ private:
     {
         Usuario, Contrasenia
     };
-    Acceso *acces;
     void cargar_cuentas();
-    void crear_dialog();
     Controlador *m_controlador;
+    QMap<QString,QString> new_usuarios;
 };
 
 #endif // USUARIOS_ADMIN_H

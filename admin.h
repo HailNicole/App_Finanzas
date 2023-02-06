@@ -5,6 +5,8 @@
 #include "registrar_usuario.h"
 #include "controlador.h"
 #include "usuarios_admin.h"
+#include "acceso.h"
+#include "principal.h"
 
 namespace Ui {
 class Admin;
@@ -20,8 +22,11 @@ public:
 
 private slots:
     void on_btn_acceder_clicked();
-
     void on_btn_crear_clicked();
+
+    void on_actionPrincipal_triggered();
+
+    void on_actionLogin_triggered();
 
 private:
     Ui::Admin *ui;

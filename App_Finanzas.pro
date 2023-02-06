@@ -15,6 +15,7 @@ SOURCES += \
     agregar_categorias.cpp \
     agregar_miembros.cpp \
     categorias.cpp \
+    confirmacion.cpp \
     controlador.cpp \
     main.cpp \
     miembros.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     agregar_categorias.h \
     agregar_miembros.h \
     categorias.h \
+    confirmacion.h \
     controlador.h \
     miembros.h \
     objeto_categoria.h \
@@ -52,6 +54,7 @@ FORMS += \
     agregar_categorias.ui \
     agregar_miembros.ui \
     categorias.ui \
+    confirmacion.ui \
     miembros.ui \
     principal.ui \
     registrar_usuario.ui \

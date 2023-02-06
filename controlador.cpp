@@ -36,6 +36,26 @@ void Controlador::Cargar_Fam(QComboBox *cb2)
     }
 }
 
+QString Controlador::Cargar_Admin(QString *dat)
+{
+    QFile archivo(tr("admin.csv"));
+        if (!archivo.exists())
+            return nullptr;
+
+        // cargar datos
+        if (archivo.open(QFile::ReadOnly)) {
+            QTextStream entrada(&archivo);
+            while(!entrada.atEnd()){
+                QString linea = entrada.readLine();
+                QStringList datos = linea.split(";");
+                *dat = datos.at(1);
+            }
+            archivo.close();
+
+        }
+        return *dat;
+}
+
 void Controlador::Guardar_U(QMap<QString, QString> usr)
 {
     QFile usuario("registro_usuarios.csv");
@@ -66,13 +86,22 @@ void Controlador::Guardar_Admin(QMap<QString, QString> usr)
     admin.close();
 }
 
-void Controlador::Guardar_R()
+void Controlador::Guardar_R(QList<Objeto_registro*> reg)
 {
     QFile dts("registro_datos.csv");
     QTextStream io;
-    dts.open(QIODevice::WriteOnly | QIODevice::Append);
+    dts.open(QIODevice::WriteOnly | QIODevice::Truncate);
     io.setDevice(&dts);
-
+    int x=0;
+    QListIterator<Objeto_registro*> i(reg);
+    while(i.hasNext()){
+        m_registro=reg.at(x);
+        io<< m_registro->fecha() << ";" << m_registro->miembro() << ";";
+        io<< m_registro->descripcion() << ";" << m_registro->categoria() << ";";
+        io<< m_registro->tipo2string() << ";" << m_registro->valor() << "\n";
+        i.next();
+        x++;
+    }
     dts.close();
 }
 
@@ -158,4 +187,14 @@ bool Controlador::entrar(bool validar)
 void Controlador::setDatos(QString fecha, QString miembro, QString descripcion, Tipo tipo, QString categoria, double valor)
 {
     this->m_registro = new Objeto_registro(fecha, miembro, descripcion, tipo, categoria, valor);
+}
+
+QString Controlador::tipoString()
+{
+    return m_registro->tipo2string();
+}
+
+Objeto_registro *Controlador::registro() const
+{
+    return m_registro;
 }

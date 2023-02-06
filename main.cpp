@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    Usuarios_admin w;
+    Admin w;
     w.show();
     /*
     if(w.acceso()){

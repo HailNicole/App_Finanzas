@@ -29,8 +29,10 @@ bool Acceso::on_btn_Ingresar_clicked()
                 return true;
             }
         }
-        QMessageBox::warning(this, tr("Administrador"), tr("Usuario y/o Contraseña Incorrecta"), tr("Aceptar"));
         setBandera(false);
+        if(!getBandera()){
+            QMessageBox::warning(this, tr("Administrador"), tr("Usuario y/o Contraseña Incorrecta"), tr("Aceptar"));
+        }
         return false;
 }
 

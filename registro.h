@@ -5,7 +5,7 @@
 #include <QMessageBox>
 #include "objeto_registro.h"
 #include "controlador.h"
-
+#include <QList>
 namespace Ui {
 class Registro;
 }
@@ -21,7 +21,6 @@ public:
 private slots:
     void on_btn_SalirREg_clicked();
     void on_btnGuardarReg_clicked();
-
     void on_btn_limpiar_clicked();
 
 private:
@@ -29,7 +28,9 @@ private:
     Tipo tipo_i;
     Controlador *m_controlador2;
     QComboBox *combo1, *combo2;
+    QList<Objeto_registro*> list;
     void limpiar();
+    void cargar_Reg();
 };
 
 #endif // REGISTRO_H

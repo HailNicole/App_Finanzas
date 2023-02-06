@@ -23,7 +23,8 @@ void Admin::on_btn_acceder_clicked()
             i.next();
             if(i.key() == ui->in_usadmin->text() && (i.value()) == ui->in_conadmin->text())
             {
-                Usuarios_admin *welcome = new Usuarios_admin(this);
+                Usuarios_admin *welcome = new Usuarios_admin();
+                this->close();
                 welcome->exec();
                 break;
             }
@@ -73,5 +74,19 @@ void Admin::cargar_admin()
         }
         adm.close();
     }
+}
+void Admin::on_actionPrincipal_triggered()
+{
+    this->close();
+    Principal *prince = new Principal(this);
+    prince->show();
+}
+
+
+void Admin::on_actionLogin_triggered()
+{
+    this->close();
+    Acceso *acces = new Acceso(this);
+    acces->show();
 }
 
