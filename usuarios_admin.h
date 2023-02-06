@@ -18,6 +18,8 @@ class Usuarios_admin : public QDialog
 public:
     explicit Usuarios_admin(QWidget *parent = nullptr);
     ~Usuarios_admin();
+    bool getCradmin() const;
+    void setCradmin(bool newCradmin);
 
 private slots:
 
@@ -34,6 +36,7 @@ private:
         Usuario, Contrasenia
     };
     void cargar_cuentas();
+    bool cradmin;
     Controlador *m_controlador;
     QMap<QString,QString> new_usuarios;
 };

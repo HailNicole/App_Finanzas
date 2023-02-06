@@ -7,6 +7,7 @@ Admin::Admin(QWidget *parent) :
     ui(new Ui::Admin)
 {
     ui->setupUi(this);
+    setWindowTitle("ADMIN");
     cargar_admin();
 }
 
@@ -15,7 +16,17 @@ Admin::~Admin()
     delete ui;
 }
 
-void Admin::on_btn_acceder_clicked()
+bool Admin::getInreso() const
+{
+    return inreso;
+}
+
+void Admin::setInreso(bool newInreso)
+{
+    inreso = newInreso;
+}
+
+bool Admin::on_btn_acceder_clicked()
 {
     QMapIterator<QString, QString> i(usuario_admin);
         while (i.hasNext())
@@ -23,17 +34,22 @@ void Admin::on_btn_acceder_clicked()
             i.next();
             if(i.key() == ui->in_usadmin->text() && (i.value()) == ui->in_conadmin->text())
             {
-                Usuarios_admin *welcome = new Usuarios_admin();
+                setInreso(true);
                 this->close();
-                welcome->exec();
-                break;
+                crear_interfaz();
+                return true;
             }
         }
-        QMessageBox::warning(this, tr("Acceso"), tr("Usuario y/o Contraseña Incorrecta"), tr("Aceptar"));
-
+        setInreso(false);
+        if(!getInreso()){
+            QMessageBox::warning(this, tr("Administrador"), tr("Usuario y/o Contraseña Incorrecta"), tr("Aceptar"));
+        }
+        return false;
 }
+
 //admin_administrador@outlook.com
 //gatitoblade
+
 void Admin::on_btn_crear_clicked()
 {
     if(usuario_admin.empty()){
@@ -75,18 +91,25 @@ void Admin::cargar_admin()
         adm.close();
     }
 }
+
+void Admin::crear_interfaz()
+{
+    this->hide();
+    Usuarios_admin *welcome = new Usuarios_admin(this);
+    welcome->exec();
+        ui->in_usadmin->clear();
+        ui->in_conadmin->clear();
+    if(!welcome->getCradmin()){
+        this->show();
+    }else{
+        Principal *prince = new Principal(this);
+        prince->show();
+    };
+
+}
 void Admin::on_actionPrincipal_triggered()
 {
     this->close();
     Principal *prince = new Principal(this);
     prince->show();
 }
-
-
-void Admin::on_actionLogin_triggered()
-{
-    this->close();
-    Acceso *acces = new Acceso(this);
-    acces->show();
-}
-

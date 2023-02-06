@@ -168,7 +168,6 @@
     <addaction name="separator"/>
     <addaction name="actionPrincipal"/>
     <addaction name="separator"/>
-    <addaction name="actionLogin"/>
     <addaction name="separator"/>
    </widget>
    <addaction name="menuOpciones"/>
@@ -181,15 +180,6 @@
    </property>
    <property name="text">
     <string>Principal</string>
-   </property>
-  </action>
-  <action name="actionLogin">
-   <property name="icon">
-    <iconset resource="recursos.qrc">
-     <normaloff>:/imagen/recursos/login (1).png</normaloff>:/imagen/recursos/login (1).png</iconset>
-   </property>
-   <property name="text">
-    <string>Login</string>
    </property>
   </action>
  </widget>

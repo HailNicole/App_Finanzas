@@ -44,6 +44,16 @@ void Usuarios_admin::cargar_cuentas()
     }
 }
 
+bool Usuarios_admin::getCradmin() const
+{
+    return cradmin;
+}
+
+void Usuarios_admin::setCradmin(bool newCradmin)
+{
+    cradmin = newCradmin;
+}
+
 void Usuarios_admin::on_btn_borrarUser_clicked()
 {
     QList<QModelIndex>big = ui->tblAdmin->selectionModel()->selectedRows();
@@ -82,6 +92,7 @@ void Usuarios_admin::on_btn_borrarUser_clicked()
 
 void Usuarios_admin::on_btn_exit_clicked()
 {
+    setCradmin(false);
     this->close();
 }
 
@@ -94,15 +105,16 @@ void Usuarios_admin::on_btn_elimadmin_clicked()
         Confirmacion confi(this);
         confi.exec();
         if(m_controlador->entrar(confi.getFlag())){
-            QFile archivo(tr("admin.csv"));
+            QFile archivo("admin.csv");
                 if (!archivo.exists())
                     return;
                 archivo.remove();
+                setCradmin(true);
                 QMessageBox::information(this,tr("Borrar Cuenta Admin"),tr("Su cuenta ha sido borrada exitosamente"));
                 this->close();
         }else{
+            setCradmin(false);
             QMessageBox::information(this,tr("Borrar Cuenta Admin"),tr("No se pudo eliminar la cuenta"));
         }
-
     }
 }

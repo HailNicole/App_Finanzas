@@ -19,20 +19,21 @@ class Admin : public QMainWindow
 public:
     explicit Admin(QWidget *parent = nullptr);
     ~Admin();
+    bool inreso;
+    bool getInreso() const;
+    void setInreso(bool newInreso);
 
 private slots:
-    void on_btn_acceder_clicked();
+    bool on_btn_acceder_clicked();
     void on_btn_crear_clicked();
-
     void on_actionPrincipal_triggered();
-
-    void on_actionLogin_triggered();
 
 private:
     Ui::Admin *ui;
     QMap<QString,QString> usuario_admin;
     Controlador *m_controlador;
     void cargar_admin();
+    void crear_interfaz();
     enum Columna
     {
         USUARIO, CONTRASENIA

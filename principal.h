@@ -11,6 +11,7 @@
 #include "registro.h"
 #include "reportes.h"
 #include "admin.h"
+#include "usuarios_admin.h"
 
 #define VERSION "0.2"
 namespace Ui {

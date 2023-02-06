@@ -35,7 +35,6 @@ public:
     void setDatos(QString fecha, QString miembro, QString descripcion, Tipo tipo, QString categoria, double valor);
     QString tipoString();
     Objeto_registro *registro() const;
-
 signals:
 
 };

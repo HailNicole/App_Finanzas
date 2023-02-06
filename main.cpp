@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 
     Admin w;
     w.show();
-    /*
+/*
     if(w.acceso()){
         w.show();
     }else{
