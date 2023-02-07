@@ -12,7 +12,7 @@ Registro::Registro(QWidget *parent) :
     combo2 = ui->in_miembro;
     m_controlador2->Cargar_Cat(combo1);
     m_controlador2->Cargar_Fam(combo2);
-    cargar_Reg();
+    Cargar_Registro();
 }
 
 Registro::~Registro()
@@ -46,9 +46,12 @@ void Registro::on_btnGuardarReg_clicked()
         QMessageBox::information(this,tr("Registro"),tr("Por favor llene todos los campos"));
         return;
     }
+    m_controlador2->setTp(tipo_i);
+    QString tipo_str = m_controlador2->tipoString();
 
-    m_controlador2->setDatos(dia, mb, des, tipo_i, cat, value);
-    Objeto_registro *obj = new Objeto_registro(dia, mb, des, tipo_i, cat, value);
+    m_controlador2->setDatos(dia, mb, des, tipo_str, cat, value);
+    Objeto_registro *obj = new Objeto_registro(dia, mb, des, tipo_str, cat, value);
+
     list.append(obj);
     m_controlador2->Guardar_R(list);
 }
@@ -69,7 +72,7 @@ void Registro::limpiar()
     ui->in_valor->setValue(0);
 }
 
-void Registro::cargar_Reg()
+void Registro::Cargar_Registro()
 {
     // Verificar si el archivo existe
     QFile dts("registro_datos.csv");
@@ -82,8 +85,9 @@ void Registro::cargar_Reg()
             QString linea = entrada.readLine();
             QStringList datos = linea.split(";");
             qDebug()<<datos;
+            Objeto_registro *obj = new Objeto_registro(datos.at(0), datos.at(1), datos.at(2), datos.at(3), datos.at(4), datos.at(5).toDouble());
+            list.append(obj);
         }
         dts.close();
     }
 }
-

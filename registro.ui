@@ -221,6 +221,9 @@
      <height>26</height>
     </rect>
    </property>
+   <property name="maximum">
+    <double>10000.989999999999782</double>
+   </property>
   </widget>
   <widget class="QPushButton" name="btn_limpiar">
    <property name="geometry">

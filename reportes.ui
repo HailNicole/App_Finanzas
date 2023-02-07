@@ -36,7 +36,11 @@
      </widget>
     </item>
     <item>
-     <widget class="QComboBox" name="combo_nombres"/>
+     <widget class="QComboBox" name="combo_nombres">
+      <property name="placeholderText">
+       <string>Escoja...</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -83,8 +87,8 @@
          <rect>
           <x>10</x>
           <y>10</y>
-          <width>941</width>
-          <height>501</height>
+          <width>1021</width>
+          <height>591</height>
          </rect>
         </property>
         <property name="text">
@@ -101,8 +105,8 @@
          <rect>
           <x>10</x>
           <y>10</y>
-          <width>941</width>
-          <height>501</height>
+          <width>1021</width>
+          <height>591</height>
          </rect>
         </property>
         <property name="text">

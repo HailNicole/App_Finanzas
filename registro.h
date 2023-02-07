@@ -30,7 +30,7 @@ private:
     QComboBox *combo1, *combo2;
     QList<Objeto_registro*> list;
     void limpiar();
-    void cargar_Reg();
+    void Cargar_Registro();
 };
 
 #endif // REGISTRO_H

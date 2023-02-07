@@ -7,11 +7,11 @@ Objeto_registro::Objeto_registro(QObject *parent)
 
 }
 
-Objeto_registro::Objeto_registro(const QString &fecha, const QString &miembro, const QString &descripcion, Tipo &tipo, const QString &categoria, double valor) :
+Objeto_registro::Objeto_registro(QString fecha, QString miembro, QString descripcion, QString tipo_string, QString categoria, double valor) :
     m_fecha(fecha),
     m_miembro(miembro),
     m_descripcion(descripcion),
-    m_tipo(tipo),
+    m_tipo_string(tipo_string),
     m_categoria(categoria),
     m_valor(valor)
 {}
@@ -56,6 +56,16 @@ void Objeto_registro::setTipo(Tipo &newTipo)
     m_tipo = newTipo;
 }
 
+const QString &Objeto_registro::tipo_string() const
+{
+    return m_tipo_string;
+}
+
+void Objeto_registro::setTipo_string(const QString &newTipo_string)
+{
+    m_tipo_string = newTipo_string;
+}
+
 const QString &Objeto_registro::categoria() const
 {
     return m_categoria;
@@ -76,9 +86,9 @@ void Objeto_registro::setValor(double newValor)
     m_valor = newValor;
 }
 
-QString Objeto_registro::tipo2string()
+QString Objeto_registro::tipo2string(Tipo tp)
 {
-    switch (m_tipo) {
+    switch (tp) {
     case Tipo::Ingreso:
         return tr("Ingreso");
         break;

@@ -7,7 +7,9 @@
 #include <QPainter>
 #include <QFileDialog>
 #include <QMessageBox>
-
+#include <QStack>
+#include <QSet>
+#include <QList>
 namespace Ui {
 class Reportes;
 }
@@ -23,13 +25,22 @@ public:
 private slots:
     void on_tabWidget_currentChanged(int index);
 
+    void on_combo_nombres_currentIndexChanged(int index);
+
+    void on_tabWidget_tabBarClicked(int index);
+
 private:
     Ui::Reportes *ui;
     Controlador *m_cont;
     QComboBox *combo_nom;
     QPixmap lienzo;
-    void dibujar();
-    void cargar_registro();
+    void dibujarI();
+    void dibujarE();
+    void cargar_R();
+    QList<QString> ingresos;
+    QList<QString> egresos;
+    QStack<QString> pilaI;
+    QStack<QString> pilaE;
 };
 
 #endif // REPORTES_H

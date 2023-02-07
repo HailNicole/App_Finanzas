@@ -15,7 +15,7 @@ void Controlador::Cargar_Cat(QComboBox *cb)
             QString linea = entrada.readLine();
             QStringList datos = linea.split(";");
             //Agregar al comboBox
-            cb->addItem(datos.back());
+            cb->addItem(datos.at(1));
         }
         cat_data.close();
     }
@@ -97,8 +97,8 @@ void Controlador::Guardar_R(QList<Objeto_registro*> reg)
     while(i.hasNext()){
         m_registro=reg.at(x);
         io<< m_registro->fecha() << ";" << m_registro->miembro() << ";";
-        io<< m_registro->descripcion() << ";" << m_registro->categoria() << ";";
-        io<< m_registro->tipo2string() << ";" << m_registro->valor() << "\n";
+        io<< m_registro->descripcion() << ";" << m_registro->tipo_string() << ";";
+        io<< m_registro->categoria() << ";" << m_registro->valor() << "\n";
         i.next();
         x++;
     }
@@ -107,8 +107,7 @@ void Controlador::Guardar_R(QList<Objeto_registro*> reg)
 
 void Controlador::crear_archivo()
 {
-    if(!QFile("registro_usuarios.csv").exists())
-    {
+    if(!QFile("registro_usuarios.csv").exists()){
         QFile usr("registro_usuarios.csv");
         usr.open(QIODevice::ReadWrite | QIODevice::Text);
         usr.close();
@@ -119,7 +118,7 @@ void Controlador::crear_archivo()
         data.close();
     }
     if(!QFile("categorias.csv").exists()){
-        QFile ct("registro_datos.csv");
+        QFile ct("categorias.csv");
         ct.open(QIODevice::ReadWrite | QIODevice::Text);
         ct.close();
     }
@@ -129,7 +128,7 @@ void Controlador::crear_archivo()
         mf.close();
     }
     if(!QFile("admin.csv").exists()){
-        QFile admin("familiares.csv");
+        QFile admin("admin.csv.csv");
         admin.open(QIODevice::ReadWrite | QIODevice::Text);
         admin.close();
     }
@@ -184,17 +183,27 @@ bool Controlador::entrar(bool validar)
     return true;
 }
 
-void Controlador::setDatos(QString fecha, QString miembro, QString descripcion, Tipo tipo, QString categoria, double valor)
+void Controlador::setDatos(QString fecha, QString miembro, QString descripcion, QString tipo_string, QString categoria, double valor)
 {
-    this->m_registro = new Objeto_registro(fecha, miembro, descripcion, tipo, categoria, valor);
+    this->m_registro = new Objeto_registro(fecha, miembro, descripcion, tipo_string, categoria, valor);
 }
 
 QString Controlador::tipoString()
 {
-    return m_registro->tipo2string();
+    return m_registro->tipo2string(getTp());
 }
 
 Objeto_registro *Controlador::registro() const
 {
     return m_registro;
+}
+
+Tipo Controlador::getTp() const
+{
+    return tp;
+}
+
+void Controlador::setTp(Tipo newTp)
+{
+    tp = newTp;
 }
