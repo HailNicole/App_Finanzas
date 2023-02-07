@@ -4,6 +4,9 @@
 #include "qdialog.h"
 #include <QWidget>
 #include "controlador.h"
+#include <QPainter>
+#include <QFileDialog>
+#include <QMessageBox>
 
 namespace Ui {
 class Reportes;

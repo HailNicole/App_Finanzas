@@ -82,4 +82,3 @@ bool Acceso::getBandera() const
 {
     return bandera;
 }
-

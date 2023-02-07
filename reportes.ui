@@ -78,7 +78,7 @@
        <attribute name="title">
         <string>Ingresos</string>
        </attribute>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="out_repor1">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -96,7 +96,7 @@
        <attribute name="title">
         <string>Egresos</string>
        </attribute>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="out_repor2">
         <property name="geometry">
          <rect>
           <x>10</x>

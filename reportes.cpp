@@ -10,6 +10,10 @@ Reportes::Reportes(QWidget *parent) :
     m_cont = new Controlador();
     combo_nom = ui->combo_nombres;
     m_cont->Cargar_Fam(combo_nom);
+    lienzo = QPixmap(500,500);
+    this->dibujar();
+    ui->out_repor1->setPixmap(lienzo);
+    ui->out_repor2->setPixmap(lienzo);
     this->cargar_registro();
 }
 
@@ -21,6 +25,16 @@ Reportes::~Reportes()
 void Reportes::on_tabWidget_currentChanged(int index)
 {
 
+}
+
+void Reportes::dibujar()
+{
+    lienzo.fill(Qt::white);
+
+    QPainter painter(&lienzo);
+
+    int x = 0;
+    int y = 0;
 }
 
 void Reportes::cargar_registro()
