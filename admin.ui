@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(73, 145, 218);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="horizontalLayoutWidget_2">
     <property name="geometry">
@@ -94,7 +97,7 @@
       <x>40</x>
       <y>80</y>
       <width>551</width>
-      <height>64</height>
+      <height>70</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
