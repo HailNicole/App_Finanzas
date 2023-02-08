@@ -69,11 +69,9 @@ void Registro::limpiar()
 {
     ui->in_day->setDate(QDate::currentDate());
     ui->in_day->setTime(QTime::currentTime());
-    //ui->in_miembro->
+
     ui->in_descripcion->clear();
-    //ui->in_ingreso->setChecked(false);
-    //ui->in_egreso->setChecked(false);
-    //ui->in_categoria->setPlaceholderText("Escoja..");
+
     ui->in_valor->setValue(0);
 }
 

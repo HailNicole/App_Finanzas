@@ -35,10 +35,10 @@ void Reportes::cargar_R()
             QString linea = entrada.readLine();
             QStringList datos = linea.split(";");
             if(combo_nom->currentText() == datos.at(1)){
-                if(datos.at(3)=="Ingreso"){
+                if(datos.at(3)==tr("Ingreso")){
                     ingresos.append(datos.at(4));
                     ingresos_count.append(datos.at(4));
-                }else if(datos.at(3)=="Egreso"){
+                }else if(datos.at(3)==tr("Egreso")){
                     egresos.append(datos.at(4));
                     egresos_count.append(datos.at(4));
                 }
@@ -144,4 +144,3 @@ void Reportes::on_btn_imp_clicked()
 {
 
 }
-
