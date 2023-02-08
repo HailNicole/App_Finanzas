@@ -51,7 +51,7 @@ QString Objeto_categoria::Tipo_String()
     case Tipo_categoria::Arriendo:
         return tr("Arriendo");
         break;
-    case Tipo_categoria::Académico:
+    case Tipo_categoria::Academico:
         return tr("Académico");
         break;
     case Tipo_categoria::Comida:

@@ -36,6 +36,7 @@ void Categorias::on_btn_agrcat_clicked()
     Objeto_categoria *cat = new Objeto_categoria(fila+1, tp);
     QString tp_str = cat->Tipo_String();
 
+
     for(int i=0; i<fila; i++){
         QTableWidgetItem *tipo = ui->tblLista_cat->item(i, TIPO);
         if(tp_str == tipo->text() || agr_cat.getValue_tipo2().toUpper() == tipo->text().toUpper()){
@@ -43,14 +44,16 @@ void Categorias::on_btn_agrcat_clicked()
             return;
         }
     }
+
     ui->tblLista_cat->insertRow(fila);
     ui->tblLista_cat->setItem(fila, ID, new QTableWidgetItem(QString::number(cat->id())));
+
 
     if(agr_cat.getBandera()){
         cat->setTipo2(agr_cat.getValue_tipo2());
         ui->tblLista_cat->setItem(fila, TIPO, new QTableWidgetItem(cat->tipo2()));
     }else{
-         ui->tblLista_cat->setItem(fila, TIPO, new QTableWidgetItem(tp_str));
+        ui->tblLista_cat->setItem(fila, TIPO, new QTableWidgetItem(tp_str));
     }
 }
 

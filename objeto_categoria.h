@@ -7,7 +7,7 @@ enum class Tipo_categoria
 {
     Salud,
     Arriendo,
-    Académico,
+    Academico,
     Comida,
     Servicios_Basicos,
     Personales,

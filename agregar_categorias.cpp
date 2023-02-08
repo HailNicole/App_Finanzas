@@ -20,16 +20,22 @@ void Agregar_Categorias::on_buttonBox_accepted()
 {
     if(ui->r_salud->isChecked()){
         tipo = Tipo_categoria::Salud;
+        setBandera(false);
     }else if (ui->r_arriendo->isChecked()){
         tipo = Tipo_categoria::Arriendo;
+        setBandera(false);
     }else if(ui->r_aca->isChecked()){
-        tipo = Tipo_categoria::Académico;
+        tipo = Tipo_categoria::Academico;
+        setBandera(false);
     }else if(ui->r_comida->isChecked()){
         tipo = Tipo_categoria::Comida;
+        setBandera(false);
     }else if(ui->r_sb->isChecked()){
         tipo = Tipo_categoria::Servicios_Basicos;
+        setBandera(false);
     }else if(ui->r_pp->isChecked()){
         tipo = Tipo_categoria::Personales;
+        setBandera(false);
     }else if(ui->r_otro->isChecked()){
         tipo = Tipo_categoria::Otros;
         value_tipo2=line->text();
@@ -76,7 +82,6 @@ QString Agregar_Categorias::getValue_tipo2() const
 void Agregar_Categorias::on_r_otro_pressed()
 {
     line->setEnabled(true);
-
 }
 
 void Agregar_Categorias::on_r_sb_clicked()
