@@ -25,7 +25,6 @@ private slots:
 private:
     Ui::Acceso *ui;
     QMap<QString,QString> usuarios2;
-    void cargarUsuarios();
     Controlador *m_controlador;
     bool bandera;
     enum Columna

@@ -22,7 +22,7 @@ public:
     void Cargar_Cat(QComboBox *cb);
     void Cargar_Fam(QComboBox *cb2);
     QString Cargar_Admin(QString *dat);
-    //void cargar_Registro();
+    QMap<QString, QString> Cargar_Usuarios(QMap<QString, QString> *usr);
 
     void Guardar_U(QMap<QString, QString> usr);
     void Guardar_Admin(QMap<QString, QString> usr);

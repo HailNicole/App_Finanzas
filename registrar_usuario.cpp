@@ -9,6 +9,7 @@ Registrar_usuario::Registrar_usuario(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowTitle(tr("Registrar"));
+    m_controlador->Cargar_Usuarios(&usuarios_anteriores);
 }
 
 Registrar_usuario::~Registrar_usuario()
@@ -26,8 +27,20 @@ void Registrar_usuario::on_buttonBox_accepted()
         return;
     }
     //Estructura map donde guarda una llave asociada a un valor
-    usuarios.insert(email,contrasenia);
-    accept();
+    QMapIterator<QString, QString> i(usuarios_anteriores);
+        while (i.hasNext())
+        {
+            i.next();
+            if(i.key() == email){
+                QMessageBox::information(this, tr("Error"), tr("Cuenta de Usuario ya registrada"));
+                break;
+                return;
+            }else{
+                usuarios.insert(email,contrasenia);
+                accept();
+            }
+        }
+
 }
 
 QMap<QString, QString> Registrar_usuario::getUsuarios() const

@@ -33,6 +33,7 @@ private:
     Ui::Registrar_usuario *ui;
     Controlador *m_controlador;
     QMap<QString,QString> usuarios;
+    QMap<QString,QString> usuarios_anteriores;
 };
 
 #endif // REGISTRAR_USUARIO_H

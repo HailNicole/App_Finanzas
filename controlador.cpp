@@ -56,6 +56,23 @@ QString Controlador::Cargar_Admin(QString *dat)
         return *dat;
 }
 
+QMap<QString, QString> Controlador::Cargar_Usuarios(QMap<QString, QString> *usr)
+{
+   QFile archivo(tr("registro_usuarios.csv"));
+    // cargar datos
+    if (archivo.open(QFile::ReadOnly)) {
+        QTextStream entrada(&archivo);
+        while(!entrada.atEnd()){
+            QString linea = entrada.readLine();
+            QStringList datos = linea.split(";");
+            qDebug()<<datos;
+            usr->insert(datos.at(0),datos.at(1));
+        }
+        archivo.close();
+    }
+    return *usr;
+}
+
 void Controlador::Guardar_U(QMap<QString, QString> usr)
 {
     QFile usuario("registro_usuarios.csv");
