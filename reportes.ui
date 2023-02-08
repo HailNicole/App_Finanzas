@@ -76,7 +76,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -85,10 +85,10 @@
        <widget class="QLabel" name="out_repor1">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>1021</width>
-          <height>591</height>
+          <x>0</x>
+          <y>0</y>
+          <width>1043</width>
+          <height>610</height>
          </rect>
         </property>
         <property name="text">
@@ -103,10 +103,10 @@
        <widget class="QLabel" name="out_repor2">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>1021</width>
-          <height>591</height>
+          <x>0</x>
+          <y>0</y>
+          <width>1043</width>
+          <height>610</height>
          </rect>
         </property>
         <property name="text">

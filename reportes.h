@@ -23,7 +23,6 @@ public:
     ~Reportes();
 
 private slots:
-    void on_tabWidget_currentChanged(int index);
 
     void on_combo_nombres_currentIndexChanged(int index);
 
@@ -34,13 +33,18 @@ private:
     Controlador *m_cont;
     QComboBox *combo_nom;
     QPixmap lienzo;
+
     void dibujarI();
     void dibujarE();
     void cargar_R();
+    void contador();
+
     QList<QString> ingresos;
     QList<QString> egresos;
-    QStack<QString> pilaI;
-    QStack<QString> pilaE;
+
+    QList<QString> ingresos_count;
+    QList<QString> egresos_count;
+
 };
 
 #endif // REPORTES_H

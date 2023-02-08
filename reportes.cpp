@@ -10,7 +10,7 @@ Reportes::Reportes(QWidget *parent) :
     m_cont = new Controlador();
     combo_nom = ui->combo_nombres;
     m_cont->Cargar_Fam(combo_nom);
-    lienzo = QPixmap(500,500);
+    lienzo = QPixmap(1043,610);
     ui->out_repor1->setPixmap(lienzo);
     ui->out_repor2->setPixmap(lienzo);
     ui->verticalLayoutWidget->hide();
@@ -19,11 +19,6 @@ Reportes::Reportes(QWidget *parent) :
 Reportes::~Reportes()
 {
     delete ui;
-}
-
-void Reportes::on_tabWidget_currentChanged(int index)
-{
-
 }
 
 void Reportes::cargar_R()
@@ -41,8 +36,10 @@ void Reportes::cargar_R()
             if(combo_nom->currentText() == datos.at(1)){
                 if(datos.at(3)=="Ingreso"){
                     ingresos.append(datos.at(4));
+                    ingresos_count.append(datos.at(4));
                 }else if(datos.at(3)=="Egreso"){
                     egresos.append(datos.at(4));
+                    egresos_count.append(datos.at(4));
                 }
             }
         }
@@ -50,18 +47,22 @@ void Reportes::cargar_R()
     }
 }
 
+void Reportes::contador()
+{
+    QListIterator<QString> i(ingresos);
+    while(i.hasNext()){
+        qDebug()<<ingresos.count(i.next());
+    }
+}
+
 void Reportes::on_combo_nombres_currentIndexChanged(int index)
 {
     if(!combo_nom->currentText().isEmpty()){
+        ingresos.clear();
+        egresos.clear();
         ui->verticalLayoutWidget->show();
         this->cargar_R();
-        /*
-        ingresos.count("Comida");
-        ingresos.removeDuplicates();
-        egresos.removeDuplicates();*/
     }
-    qDebug()<<ingresos;
-    qDebug()<<egresos;
 }
 
 void Reportes::dibujarE()
@@ -73,11 +74,24 @@ void Reportes::dibujarE()
     int x = 0;
     int y = 0;
 
-    // Crear un pincel para los bordes
-    QPen pincel;
-    pincel.setWidth(5);
-    pincel.setColor(Qt::red);
-    pincel.setJoinStyle(Qt::MiterJoin);
+    egresos.removeDuplicates();
+    for(int i=0; i<egresos.size(); i++){
+        // Crear un pincel para los bordes
+        QPen pincel;
+        pincel.setWidth(5);
+        pincel.setColor(Qt::red);
+        pincel.setJoinStyle(Qt::MiterJoin);
+
+        painter.setPen(pincel);
+
+        int y2 = egresos_count.count(egresos.at(i));
+
+        painter.drawRect(x+5,y+(610-y2),30,y2);
+
+        x+=50;
+    }
+
+    ui->out_repor2->setPixmap(lienzo);
 }
 
 void Reportes::dibujarI()
@@ -89,15 +103,32 @@ void Reportes::dibujarI()
     int x = 0;
     int y = 0;
 
-    // Crear un pincel para los bordes
-    QPen pincel;
-    pincel.setWidth(5);
-    pincel.setColor(Qt::red);
-    pincel.setJoinStyle(Qt::MiterJoin);
+    ingresos.removeDuplicates();
+
+    for(int i=0; i<ingresos.size(); i++){
+        // Crear un pincel para los bordes
+        QPen pincel;
+        pincel.setWidth(5);
+        pincel.setColor(Qt::red);
+        pincel.setJoinStyle(Qt::MiterJoin);
+
+        painter.setPen(pincel);
+
+        int y2 = ingresos_count.count(ingresos.at(i));
+
+        painter.drawRect(x+5,y+(610-y2),30,y2);
+
+        x+=50;
+    }
+
+    ui->out_repor1->setPixmap(lienzo);
 }
 
 void Reportes::on_tabWidget_tabBarClicked(int index)
 {
-
+    if(index==0){
+        dibujarI();
+    }else if(index==1){
+        dibujarE();
+    }
 }
-
