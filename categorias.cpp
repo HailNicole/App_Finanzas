@@ -147,7 +147,7 @@ void Categorias::on_btn_guardarcat_clicked()
         archivo2.close();
         QMessageBox::information(this,tr("Guardar Categorias"),tr("Datos guardados con éxito"));
     }else{
-        QMessageBox::critical(this,tr("Guardar Categorias"), tr("No se puede escribir sobre ") + tr("categorias.csv"));
+        QMessageBox::critical(this,tr("Guardar Categorias"), tr("No se puede escribir sobre ") + "categorias.csv");
     }
 }
 

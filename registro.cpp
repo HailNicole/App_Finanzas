@@ -7,6 +7,7 @@ Registro::Registro(QWidget *parent) :
     ui(new Ui::Registro)
 {
     ui->setupUi(this);
+    setWindowTitle(tr("REGISTRO"));
     m_controlador2 = new Controlador();
     combo1 = ui->in_categoria;
     combo2 = ui->in_miembro;
@@ -56,6 +57,7 @@ void Registro::on_btnGuardarReg_clicked()
 
     list.append(obj);
     m_controlador2->Guardar_R(list);
+    QMessageBox::information(this, tr("Registro"), tr("Datos guardados con éxito"));
 }
 
 void Registro::on_btn_limpiar_clicked()

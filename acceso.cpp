@@ -17,8 +17,7 @@ Acceso::~Acceso()
 bool Acceso::on_btn_Ingresar_clicked()
 {
     QMapIterator<QString, QString> i(usuarios2);
-        while (i.hasNext())
-        {
+        while (i.hasNext()){
             i.next();
             if(i.key() == ui->in_Usuario->text() && (i.value()) == ui->in_Contra->text())
             {
@@ -61,3 +60,17 @@ bool Acceso::getBandera() const
 {
     return bandera;
 }
+
+void Acceso::on_btn_ingles_clicked()
+{
+    QTranslator traducion;
+    traducion.load(":/Calculadora_en.qm");
+}
+
+
+void Acceso::on_btn_francia_clicked()
+{
+    QTranslator traducion;
+    traducion.load(":/Calculadora_fr_FR.qm");
+}
+

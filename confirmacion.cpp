@@ -6,13 +6,13 @@ Confirmacion::Confirmacion(QWidget *parent) :
     ui(new Ui::Confirmacion)
 {
     ui->setupUi(this);
+    setWindowTitle(tr("CONFIRMACION"));
 }
 
 Confirmacion::~Confirmacion()
 {
     delete ui;
 }
-
 
 bool Confirmacion::on_btn_confi_clicked()
 {

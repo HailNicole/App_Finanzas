@@ -138,7 +138,7 @@ void Miembros::on_btn_guardar_clicked()
         archivo.close();
         QMessageBox::information(this,tr("Guardar Datos"),tr("Datos guardados con éxito"));
     }else{
-        QMessageBox::critical(this,tr("Guardar Datos"), tr("No se puede escribir sobre ") + tr("familiares.csv"));
+        QMessageBox::critical(this,tr("Guardar Datos"), tr("No se puede escribir sobre ") + "familiares.csv");
     }
 }
 

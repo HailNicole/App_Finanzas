@@ -38,7 +38,7 @@ void Controlador::Cargar_Fam(QComboBox *cb2)
 
 QString Controlador::Cargar_Admin(QString *dat)
 {
-    QFile archivo(tr("admin.csv"));
+    QFile archivo("admin.csv");
         if (!archivo.exists())
             return nullptr;
 
@@ -58,7 +58,7 @@ QString Controlador::Cargar_Admin(QString *dat)
 
 QMap<QString, QString> Controlador::Cargar_Usuarios(QMap<QString, QString> *usr)
 {
-   QFile archivo(tr("registro_usuarios.csv"));
+   QFile archivo("registro_usuarios.csv");
     // cargar datos
     if (archivo.open(QFile::ReadOnly)) {
         QTextStream entrada(&archivo);

@@ -55,6 +55,13 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
+     <widget class="QPushButton" name="btn_imp">
+      <property name="text">
+       <string>Imprimir</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QLabel" name="label_2">
       <property name="font">
        <font>
@@ -76,7 +83,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -117,19 +124,6 @@
      </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QPushButton" name="btn_imp">
-   <property name="geometry">
-    <rect>
-     <x>950</x>
-     <y>40</y>
-     <width>111</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Imprimir</string>
-   </property>
   </widget>
   <widget class="QPushButton" name="btn_atras">
    <property name="geometry">

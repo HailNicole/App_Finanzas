@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "registrar_usuario.h"
 #include "controlador.h"
+#include <QTranslator>
 
 namespace Ui {
 class Acceso;
@@ -22,6 +23,11 @@ public:
 private slots:
     bool on_btn_Ingresar_clicked();
     void on_btn_Registrar_clicked();
+
+    void on_btn_ingles_clicked();
+
+    void on_btn_francia_clicked();
+
 private:
     Ui::Acceso *ui;
     QMap<QString,QString> usuarios2;

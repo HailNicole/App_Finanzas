@@ -40,7 +40,6 @@ void Registrar_usuario::on_buttonBox_accepted()
                 accept();
             }
         }
-
 }
 
 QMap<QString, QString> Registrar_usuario::getUsuarios() const

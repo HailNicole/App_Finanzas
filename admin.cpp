@@ -7,7 +7,7 @@ Admin::Admin(QWidget *parent) :
     ui(new Ui::Admin)
 {
     ui->setupUi(this);
-    setWindowTitle("ADMIN");
+    setWindowTitle(tr("ADMINISTRADOR"));
     cargar_admin();
 }
 
@@ -75,7 +75,7 @@ void Admin::on_btn_crear_clicked()
 void Admin::cargar_admin()
 {
     // Verificar si el archivo existe
-   QFile adm(tr("admin.csv"));
+   QFile adm("admin.csv");
     if (!adm.exists())
         return;
 

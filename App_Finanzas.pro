@@ -62,6 +62,10 @@ FORMS += \
     reportes.ui \
     usuarios_admin.ui
 
+TRANSLATIONS += \
+        Calculadora_fr_FR.ts \
+        Calculadora_en.ts
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

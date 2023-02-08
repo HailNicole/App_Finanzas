@@ -16,7 +16,7 @@ Acerca_de::~Acerca_de()
 void Acerca_de::setVersion(const QString &newVersion)
 {
     m_version = newVersion;
-    ui->outVersion->setText("v " + m_version);
+    ui->outVersion->setText(" v " + m_version);
 }
 
 int Acerca_de::valor() const

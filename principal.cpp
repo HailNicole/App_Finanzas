@@ -82,6 +82,4 @@ void Principal::on_actionAdministrador_triggered()
     this->hide();
     Admin *admin = new Admin(this);
     admin->show();
-
 }
-
