@@ -38,7 +38,7 @@ void Categorias::on_btn_agrcat_clicked()
 
     for(int i=0; i<fila; i++){
         QTableWidgetItem *tipo = ui->tblLista_cat->item(i, TIPO);
-        if(tp_str == tipo->text() || agr_cat.getValue_tipo2() == tipo->text()){
+        if(tp_str == tipo->text() || agr_cat.getValue_tipo2().toUpper() == tipo->text().toUpper()){
             QMessageBox::information(this,tr("Agregar Categoria"),tr("No se permiten elementos repetido en la tabla"));
             return;
         }

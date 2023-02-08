@@ -139,6 +139,9 @@
      <height>25</height>
     </rect>
    </property>
+   <property name="placeholderText">
+    <string>Escoja...</string>
+   </property>
   </widget>
   <widget class="QRadioButton" name="in_ingreso">
    <property name="geometry">
@@ -210,6 +213,9 @@
      <width>131</width>
      <height>25</height>
     </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Escoja...</string>
    </property>
   </widget>
   <widget class="QDoubleSpinBox" name="in_valor">

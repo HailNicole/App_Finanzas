@@ -12,6 +12,8 @@ Registro::Registro(QWidget *parent) :
     combo2 = ui->in_miembro;
     m_controlador2->Cargar_Cat(combo1);
     m_controlador2->Cargar_Fam(combo2);
+    ui->in_day->setDate(QDate::currentDate());
+    ui->in_day->setTime(QTime::currentTime());
     Cargar_Registro();
 }
 
@@ -42,7 +44,7 @@ void Registro::on_btnGuardarReg_clicked()
         return;
     }
 
-    if(!m_controlador2->validar_campo_vacio(mb) || !m_controlador2->validar_campo_vacio(des) || !m_controlador2->validar_campo_vacio(cat) || value == 0){
+    if(!m_controlador2->validar_campo_vacio(mb) || !m_controlador2->validar_campo_vacio(des) || !m_controlador2->validar_campo_vacio(cat) || value == 0 || mb.isEmpty() || cat.isEmpty()){
         QMessageBox::information(this,tr("Registro"),tr("Por favor llene todos los campos"));
         return;
     }
@@ -63,12 +65,13 @@ void Registro::on_btn_limpiar_clicked()
 
 void Registro::limpiar()
 {
-    ui->in_day->clear();
-    ui->in_miembro->clearEditText();
+    ui->in_day->setDate(QDate::currentDate());
+    ui->in_day->setTime(QTime::currentTime());
+    //ui->in_miembro->
     ui->in_descripcion->clear();
-    ui->in_ingreso->setChecked(false);
-    ui->in_egreso->setChecked(false);
-    ui->in_categoria->clearEditText();
+    //ui->in_ingreso->setChecked(false);
+    //ui->in_egreso->setChecked(false);
+    //ui->in_categoria->setPlaceholderText("Escoja..");
     ui->in_valor->setValue(0);
 }
 

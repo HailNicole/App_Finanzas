@@ -7,7 +7,7 @@ Agregar_Categorias::Agregar_Categorias(QWidget *parent) :
     ui(new Ui::Agregar_Categorias)
 {
     ui->setupUi(this);
-    setWindowTitle("Agregar Categoria");
+    setWindowTitle(tr("Agregar Categoria"));
     line = ui->in_otro;
 }
 

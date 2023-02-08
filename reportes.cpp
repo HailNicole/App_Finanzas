@@ -7,6 +7,7 @@ Reportes::Reportes(QWidget *parent) :
     ui(new Ui::Reportes)
 {
     ui->setupUi(this);
+    setWindowTitle(tr("REPORTES"));
     m_cont = new Controlador();
     combo_nom = ui->combo_nombres;
     m_cont->Cargar_Fam(combo_nom);
@@ -132,3 +133,15 @@ void Reportes::on_tabWidget_tabBarClicked(int index)
         dibujarE();
     }
 }
+
+void Reportes::on_btn_atras_clicked()
+{
+    this->close();
+}
+
+
+void Reportes::on_btn_imp_clicked()
+{
+
+}
+

@@ -11,7 +11,7 @@ Usuarios_admin::Usuarios_admin(QWidget *parent) :
     // Configurar la tabla
     ui->tblAdmin->setColumnCount(2);
     QStringList titulo;
-    titulo << "User" << "Password";
+    titulo << tr("Usuario") << tr("Contraseña");
     ui->tblAdmin->setHorizontalHeaderLabels(titulo);
     cargar_cuentas();
 }
@@ -24,7 +24,7 @@ Usuarios_admin::~Usuarios_admin()
 void Usuarios_admin::cargar_cuentas()
 {
     // Verificar si el archivo existe
-   QFile archivo(tr("registro_usuarios.csv"));
+   QFile archivo("registro_usuarios.csv");
     if (!archivo.exists())
         return;
 
@@ -63,7 +63,7 @@ void Usuarios_admin::on_btn_borrarUser_clicked()
     }
 
     QMessageBox::StandardButton replied;
-    replied = QMessageBox::question(this, "Confirmacion", "Desea borrar esta cuenta permanentemente?",
+    replied = QMessageBox::question(this, tr("Confirmacion"), tr("Desea borrar esta cuenta permanentemente?"),
             QMessageBox::Yes | QMessageBox::Cancel);
 
     if(replied == QMessageBox::Yes){
@@ -99,7 +99,7 @@ void Usuarios_admin::on_btn_exit_clicked()
 void Usuarios_admin::on_btn_elimadmin_clicked()
 {
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Confirmacion", "Desea borrar su cuenta de administrador?",
+    reply = QMessageBox::question(this, tr("Confirmacion"), tr("Desea borrar su cuenta de administrador?"),
             QMessageBox::Yes | QMessageBox::Cancel);
     if(reply == QMessageBox::Yes){
         Confirmacion confi(this);

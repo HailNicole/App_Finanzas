@@ -47,12 +47,10 @@ void Agregar_Miembros::on_buttonBox_accepted()
     accept();
 }
 
-
 void Agregar_Miembros::on_buttonBox_rejected()
 {
     reject();
 }
-
 
 void Agregar_Miembros::on_in_nom_editingFinished()
 {
@@ -76,4 +74,3 @@ void Agregar_Miembros::on_in_ape_editingFinished()
         ui->in_ape->setStyleSheet("background-color: rgb(153, 193, 241)");
     }
 }
-

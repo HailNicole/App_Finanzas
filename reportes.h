@@ -28,6 +28,10 @@ private slots:
 
     void on_tabWidget_tabBarClicked(int index);
 
+    void on_btn_atras_clicked();
+
+    void on_btn_imp_clicked();
+
 private:
     Ui::Reportes *ui;
     Controlador *m_cont;
