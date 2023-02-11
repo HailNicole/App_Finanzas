@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(73, 145, 218);</string>
+   <string notr="true">background-color: rgb(156, 245, 147);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="horizontalLayoutWidget_2">
@@ -144,13 +144,20 @@
      </item>
      <item row="1" column="1">
       <widget class="QLineEdit" name="in_conadmin">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="in_usadmin"/>
+      <widget class="QLineEdit" name="in_usadmin">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -163,6 +170,9 @@
      <width>628</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <widget class="QMenu" name="menuOpciones">
     <property name="title">

@@ -51,6 +51,8 @@ void Principal::on_actionRegistrar_triggered()
     this->hide();
     reg->exec();
     this->show();
+    ui->in_tti->setText(QString::number(reg->getConting()));
+    ui->in_tte->setText(QString::number(reg->getContegr()));
 }
 
 bool Principal::acceso()
@@ -70,6 +72,7 @@ void Principal::on_actionReporte_triggered()
     this->hide();
     reporte->exec();
     this->show();
+
 }
 
 void Principal::on_actionSalir_triggered()

@@ -6,10 +6,14 @@
 #include "controlador.h"
 #include <QPainter>
 #include <QFileDialog>
+#include <QFile>
+#include <QDir>
 #include <QMessageBox>
-#include <QStack>
-#include <QSet>
 #include <QList>
+#include <QDesktopServices>
+#include <QUrl>
+#include <QPdfWriter>
+
 namespace Ui {
 class Reportes;
 }
@@ -31,6 +35,8 @@ private slots:
     void on_btn_atras_clicked();
 
     void on_btn_imp_clicked();
+
+    void on_btn_savereport_clicked();
 
 private:
     Ui::Reportes *ui;

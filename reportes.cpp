@@ -11,7 +11,8 @@ Reportes::Reportes(QWidget *parent) :
     m_cont = new Controlador();
     combo_nom = ui->combo_nombres;
     m_cont->Cargar_Fam(combo_nom);
-    lienzo = QPixmap(1043,610);
+    lienzo = QPixmap(ui->out_repor1->width(),ui->out_repor1->height());
+    lienzo.fill(Qt::white);
     ui->out_repor1->setPixmap(lienzo);
     ui->out_repor2->setPixmap(lienzo);
     ui->verticalLayoutWidget->hide();
@@ -70,59 +71,61 @@ void Reportes::dibujarE()
 {
     lienzo.fill(Qt::white);
 
-    QPainter painter(&lienzo);
+       QPainter painter(&lienzo);
+       QPen pincel;
 
-    int x = 0;
-    int y = 0;
+       int x = 0;
+       int y = 0;
 
-    egresos.removeDuplicates();
-    for(int i=0; i<egresos.size(); i++){
-        // Crear un pincel para los bordes
-        QPen pincel;
-        pincel.setWidth(5);
-        pincel.setColor(Qt::red);
-        pincel.setJoinStyle(Qt::MiterJoin);
+       egresos.removeDuplicates();
 
-        painter.setPen(pincel);
+       for(int i=0; i<egresos.size(); i++){
+           QColor *colorBorde = new QColor(190+x,120+x,162+x);
 
-        int y2 = egresos_count.count(egresos.at(i));
+           pincel.setWidth(5);
+           pincel.setColor(*colorBorde);
+           pincel.setJoinStyle(Qt::MiterJoin);
+           painter.setPen(pincel);
 
-        painter.drawRect(x+5,y+(610-y2),30,y2);
+           int y2 = egresos_count.count(egresos.at(i));
 
-        x+=50;
-    }
+           painter.drawRect(x+5,y+(581-y2),30,y2);
 
-    ui->out_repor2->setPixmap(lienzo);
+           x+=50;
+       }
+
+       ui->out_repor2->setPixmap(lienzo);
 }
 
 void Reportes::dibujarI()
 {
     lienzo.fill(Qt::white);
 
-    QPainter painter(&lienzo);
-
-    int x = 0;
-    int y = 0;
-
-    ingresos.removeDuplicates();
-
-    for(int i=0; i<ingresos.size(); i++){
-        // Crear un pincel para los bordes
+        QPainter painter(&lienzo);
         QPen pincel;
-        pincel.setWidth(5);
-        pincel.setColor(Qt::red);
-        pincel.setJoinStyle(Qt::MiterJoin);
 
-        painter.setPen(pincel);
+        int x = 0;
+        int y = 0;
 
-        int y2 = ingresos_count.count(ingresos.at(i));
+        ingresos.removeDuplicates();
 
-        painter.drawRect(x+5,y+(610-y2),30,y2);
+        for(int i=0; i<ingresos.size(); i++){
+            QColor *colorBorde = new QColor(190+x,120+x,162+x);
 
-        x+=50;
-    }
+            pincel.setWidth(5);
+            pincel.setColor(*colorBorde);
+            pincel.setJoinStyle(Qt::MiterJoin);
 
-    ui->out_repor1->setPixmap(lienzo);
+            painter.setPen(pincel);
+
+            int y2 = ingresos_count.count(ingresos.at(i));
+
+            painter.drawRect(x+5,y+(581-y2),30,y2);
+
+            x+=50;
+        }
+
+        ui->out_repor1->setPixmap(lienzo);
 }
 
 void Reportes::on_tabWidget_tabBarClicked(int index)
@@ -142,5 +145,44 @@ void Reportes::on_btn_atras_clicked()
 
 void Reportes::on_btn_imp_clicked()
 {
+    //Crear un objeto QDir a partir del directorio del usuario
+    QDir directorio = QDir::home();
 
+    //Agregar al path absoluto del objeto un nombre por defecto del archivo
+    QString pathArchivo = directorio.absolutePath() + "/Reportes.pdf";
+
+    QPdfWriter pdf(pathArchivo);
+
+    QPainter painter(&pdf);
+
+    painter.drawPixmap(100,400,QPixmap(lienzo));
+
+    painter.end();
+
+    QDesktopServices::openUrl(QUrl::fromLocalFile(pathArchivo));
 }
+
+void Reportes::on_btn_savereport_clicked()
+{
+    // Abrir cuadro de diálogo para obtener el nombre del archivo
+    QString nombreArchivo = QFileDialog::getSaveFileName(this,
+                                                         "Guardar imagen",
+                                                         QDir::home().absolutePath() + "/reportes.png",
+                                                         "Imágenes .png (*.png)");
+    // Validar que el nombre del archivo no sea vacío
+    if ( !nombreArchivo.isEmpty() ){
+        // Guardar imagen
+        if (lienzo.save(nombreArchivo)){
+            // Si todo va bien, muestra un mensaje de información
+            QMessageBox::information(this,
+                                     "Guardar imagen",
+                                     "Archivo almacenado en: " + nombreArchivo);
+        } else{
+            // Si hay algún error, muestro advertencia
+            QMessageBox::warning(this,
+                                 "Guardar imagen",
+                                 "No se pudo almacenar la imagen.");
+        }
+    }
+}
+

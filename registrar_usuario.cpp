@@ -26,20 +26,18 @@ void Registrar_usuario::on_buttonBox_accepted()
         QMessageBox::information(this, tr("Error"), tr("Datos Erróneos o Incompletos"));
         return;
     }
-    //Estructura map donde guarda una llave asociada a un valor
+
     QMapIterator<QString, QString> i(usuarios_anteriores);
-        while (i.hasNext())
-        {
+        while (i.hasNext()){
             i.next();
             if(i.key() == email){
                 QMessageBox::information(this, tr("Error"), tr("Cuenta de Usuario ya registrada"));
-                break;
                 return;
-            }else{
-                usuarios.insert(email,contrasenia);
-                accept();
             }
         }
+        //Estructura map donde guarda una llave asociada a un valor
+        usuarios.insert(email,contrasenia);
+        accept();
 }
 
 QMap<QString, QString> Registrar_usuario::getUsuarios() const
@@ -62,4 +60,3 @@ void Registrar_usuario::on_toolButton_pressed()
 {
     ui->in_regcontra->setEchoMode(QLineEdit::Normal);
 }
-

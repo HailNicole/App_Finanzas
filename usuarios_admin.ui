@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(156, 245, 147);</string>
+  </property>
   <widget class="QTableWidget" name="tblAdmin">
    <property name="geometry">
     <rect>
@@ -21,6 +24,9 @@
      <width>341</width>
      <height>281</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="editTriggers">
     <set>QAbstractItemView::NoEditTriggers</set>
@@ -41,7 +47,8 @@
    <property name="font">
     <font>
      <family>Arial Black</family>
-     <bold>false</bold>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -79,6 +86,9 @@
     </item>
     <item>
      <widget class="QPushButton" name="btn_borrarUser">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Borrar Usuario</string>
       </property>
@@ -108,6 +118,9 @@
      <height>25</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Borrar Cuenta de Administrador</string>
    </property>
@@ -120,6 +133,9 @@
      <width>89</width>
      <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Salir</string>

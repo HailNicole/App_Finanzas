@@ -17,6 +17,10 @@
    <iconset resource="recursos.qrc">
     <normaloff>:/imagen/recursos/safe home.png</normaloff>:/imagen/recursos/safe home.png</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(217, 252, 110);
+background-color: rgb(233, 253, 173);</string>
+  </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>

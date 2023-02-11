@@ -17,6 +17,9 @@
    <iconset resource="recursos.qrc">
     <normaloff>:/imagen/recursos/safe home.png</normaloff>:/imagen/recursos/safe home.png</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(156, 245, 147);</string>
+  </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
@@ -25,6 +28,10 @@
      <width>181</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(192, 245, 255);
+background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
@@ -36,15 +43,18 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>20</y>
-     <width>67</width>
-     <height>17</height>
+     <x>100</x>
+     <y>10</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Arial Black</family>
+     <pointsize>20</pointsize>
+     <bold>true</bold>
+     <underline>true</underline>
     </font>
    </property>
    <property name="layoutDirection">
@@ -69,6 +79,11 @@
    <layout class="QFormLayout" name="formLayout">
     <item row="0" column="0">
      <widget class="QRadioButton" name="r_salud">
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Salud</string>
       </property>
@@ -76,6 +91,11 @@
     </item>
     <item row="0" column="1">
      <widget class="QRadioButton" name="r_arriendo">
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Arriendo</string>
       </property>
@@ -83,6 +103,11 @@
     </item>
     <item row="1" column="0">
      <widget class="QRadioButton" name="r_aca">
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Académico</string>
       </property>
@@ -90,6 +115,11 @@
     </item>
     <item row="1" column="1">
      <widget class="QRadioButton" name="r_comida">
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Comida</string>
       </property>
@@ -97,6 +127,11 @@
     </item>
     <item row="2" column="0">
      <widget class="QRadioButton" name="r_sb">
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Servicios Básicos</string>
       </property>
@@ -104,6 +139,11 @@
     </item>
     <item row="2" column="1">
      <widget class="QRadioButton" name="r_pp">
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Personales</string>
       </property>
@@ -111,6 +151,11 @@
     </item>
     <item row="3" column="0">
      <widget class="QRadioButton" name="r_otro">
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Otro</string>
       </property>
@@ -120,6 +165,9 @@
      <widget class="QLineEdit" name="in_otro">
       <property name="enabled">
        <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="dragEnabled">
        <bool>false</bool>

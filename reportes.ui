@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Reportes</class>
  <widget class="QWidget" name="Reportes">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,8 +13,15 @@
     <height>770</height>
    </rect>
   </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Reportes{
+border-image: url(:/imagen/recursos/pngtree-green-cool-wallpaper-background-hd-image_736893.jpg);}</string>
   </property>
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
@@ -37,6 +47,9 @@
     </item>
     <item>
      <widget class="QComboBox" name="combo_nombres">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="placeholderText">
        <string>Escoja...</string>
       </property>
@@ -55,11 +68,28 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="btn_imp">
-      <property name="text">
-       <string>Imprimir</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="btn_savereport">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Guardar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_imp">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Imprimir</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QLabel" name="label_2">
@@ -90,13 +120,22 @@
         <string>Ingresos</string>
        </attribute>
        <widget class="QLabel" name="out_repor1">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
           <width>1043</width>
-          <height>610</height>
+          <height>591</height>
          </rect>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="tabletTracking">
+         <bool>false</bool>
         </property>
         <property name="text">
          <string/>
@@ -113,7 +152,7 @@
           <x>0</x>
           <y>0</y>
           <width>1043</width>
-          <height>610</height>
+          <height>591</height>
          </rect>
         </property>
         <property name="text">
@@ -133,6 +172,9 @@
      <width>111</width>
      <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Atrás</string>

@@ -49,6 +49,7 @@ void Registro::on_btnGuardarReg_clicked()
         QMessageBox::information(this,tr("Registro"),tr("Por favor llene todos los campos"));
         return;
     }
+
     m_controlador2->setTp(tipo_i);
     QString tipo_str = m_controlador2->tipoString();
 
@@ -57,7 +58,15 @@ void Registro::on_btnGuardarReg_clicked()
 
     list.append(obj);
     m_controlador2->Guardar_R(list);
+
+    if(ui->in_ingreso->isChecked()){
+        conting+=value;
+    }else if(ui->in_egreso->isChecked()){
+        contegr+=value;
+    }
+
     QMessageBox::information(this, tr("Registro"), tr("Datos guardados con éxito"));
+    limpiar();
 }
 
 void Registro::on_btn_limpiar_clicked()
@@ -71,6 +80,15 @@ void Registro::limpiar()
     ui->in_day->setTime(QTime::currentTime());
 
     ui->in_descripcion->clear();
+    ui->in_miembro->setCurrentIndex(-1);
+    ui->in_categoria->setCurrentIndex(-1);
+    ui->in_ingreso->setAutoExclusive(false);
+    ui->in_ingreso->setChecked(false);
+    ui->in_ingreso->setAutoExclusive(true);
+
+    ui->in_egreso->setAutoExclusive(false);
+    ui->in_egreso->setChecked(false);
+    ui->in_egreso->setAutoExclusive(true);
 
     ui->in_valor->setValue(0);
 }
@@ -93,4 +111,14 @@ void Registro::Cargar_Registro()
         }
         dts.close();
     }
+}
+
+double Registro::getContegr() const
+{
+    return contegr;
+}
+
+double Registro::getConting() const
+{
+    return conting;
 }

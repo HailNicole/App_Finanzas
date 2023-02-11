@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(253, 106, 113);
+background-color: rgb(156, 245, 147);</string>
+  </property>
   <widget class="QTableWidget" name="tblLista_cat">
    <property name="geometry">
     <rect>
@@ -21,6 +25,9 @@
      <width>331</width>
      <height>331</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -56,6 +63,9 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QPushButton" name="btn_cancat">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Atrás</string>
       </property>
@@ -76,6 +86,9 @@
     </item>
     <item>
      <widget class="QPushButton" name="btn_guardarcat">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Guardar</string>
       </property>
@@ -83,6 +96,9 @@
     </item>
     <item>
      <widget class="QPushButton" name="btn_agrcat">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="text">
        <string>Agregar</string>
       </property>
