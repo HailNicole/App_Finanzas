@@ -42,7 +42,7 @@ private:
     Ui::Reportes *ui;
     Controlador *m_cont;
     QComboBox *combo_nom;
-    QPixmap lienzo;
+    QPixmap *lienzo, *lienzo2;
 
     void dibujarI();
     void dibujarE();

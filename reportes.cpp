@@ -11,10 +11,12 @@ Reportes::Reportes(QWidget *parent) :
     m_cont = new Controlador();
     combo_nom = ui->combo_nombres;
     m_cont->Cargar_Fam(combo_nom);
-    lienzo = QPixmap(ui->out_repor1->width(),ui->out_repor1->height());
-    lienzo.fill(Qt::white);
-    ui->out_repor1->setPixmap(lienzo);
-    ui->out_repor2->setPixmap(lienzo);
+    lienzo = new QPixmap(ui->out_repor1->width(),ui->out_repor1->height());
+    lienzo2 = new QPixmap(ui->out_repor2->width(),ui->out_repor2->height());
+    lienzo->fill(Qt::white);
+    lienzo2->fill(Qt::white);
+    ui->out_repor1->setPixmap(*lienzo);
+    ui->out_repor2->setPixmap(*lienzo2);
     ui->verticalLayoutWidget->hide();
 }
 
@@ -69,18 +71,16 @@ void Reportes::on_combo_nombres_currentIndexChanged(int index)
 
 void Reportes::dibujarE()
 {
-    lienzo.fill(Qt::white);
-
-       QPainter painter(&lienzo);
+       QPainter painter(lienzo2);
        QPen pincel;
 
-       int x = 0;
+       int x = 5;
        int y = 0;
 
        egresos.removeDuplicates();
 
        for(int i=0; i<egresos.size(); i++){
-           QColor *colorBorde = new QColor(190+x,120+x,162+x);
+           QColor *colorBorde = new QColor(165+i+5,42+i+5,42+i+5);
 
            pincel.setWidth(5);
            pincel.setColor(*colorBorde);
@@ -89,28 +89,30 @@ void Reportes::dibujarE()
 
            int y2 = egresos_count.count(egresos.at(i));
 
-           painter.drawRect(x+5,y+(581-y2),30,y2);
+           painter.drawRect(x,y+(ui->out_repor2->height()-y2),60,y2);
+           painter.setFont(QFont("Arial", 12));
+           pincel.setColor(Qt::black);
+           painter.setPen(pincel);
+           painter.drawText(x-2, y+(ui->out_repor1->height()-y2)-3, egresos.value(i));
 
-           x+=50;
+           x+=75;
        }
 
-       ui->out_repor2->setPixmap(lienzo);
+       ui->out_repor2->setPixmap(*lienzo2);
 }
 
 void Reportes::dibujarI()
 {
-    lienzo.fill(Qt::white);
-
-        QPainter painter(&lienzo);
+        QPainter painter(lienzo);
         QPen pincel;
 
-        int x = 0;
+        int x = 5;
         int y = 0;
 
         ingresos.removeDuplicates();
 
         for(int i=0; i<ingresos.size(); i++){
-            QColor *colorBorde = new QColor(190+x,120+x,162+x);
+            QColor *colorBorde = new QColor(165+i+5,42+i+5,42+i+5);
 
             pincel.setWidth(5);
             pincel.setColor(*colorBorde);
@@ -120,19 +122,25 @@ void Reportes::dibujarI()
 
             int y2 = ingresos_count.count(ingresos.at(i));
 
-            painter.drawRect(x+5,y+(581-y2),30,y2);
+            painter.drawRect(x,y+(ui->out_repor1->height()-y2),60,y2);
 
-            x+=50;
+            painter.setFont(QFont("Arial", 12));
+            pincel.setColor(Qt::black);
+            painter.setPen(pincel);
+            painter.drawText(x-2, y+(ui->out_repor1->height()-y2)-3, ingresos.value(i));
+
+            x+=75;
         }
-
-        ui->out_repor1->setPixmap(lienzo);
+        ui->out_repor1->setPixmap(*lienzo);
 }
 
 void Reportes::on_tabWidget_tabBarClicked(int index)
 {
     if(index==0){
+        lienzo->fill(Qt::white);
         dibujarI();
     }else if(index==1){
+        lienzo2->fill(Qt::white);
         dibujarE();
     }
 }
@@ -155,7 +163,7 @@ void Reportes::on_btn_imp_clicked()
 
     QPainter painter(&pdf);
 
-    painter.drawPixmap(100,400,QPixmap(lienzo));
+    painter.drawPixmap(100,400,QPixmap(*lienzo));
 
     painter.end();
 
@@ -172,7 +180,7 @@ void Reportes::on_btn_savereport_clicked()
     // Validar que el nombre del archivo no sea vacío
     if ( !nombreArchivo.isEmpty() ){
         // Guardar imagen
-        if (lienzo.save(nombreArchivo)){
+        if (lienzo->save(nombreArchivo)){
             // Si todo va bien, muestra un mensaje de información
             QMessageBox::information(this,
                                      "Guardar imagen",

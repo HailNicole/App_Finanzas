@@ -109,11 +109,14 @@ border-image: url(:/imagen/recursos/pngtree-green-cool-wallpaper-background-hd-i
     </item>
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
       <property name="tabShape">
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -121,14 +124,14 @@ border-image: url(:/imagen/recursos/pngtree-green-cool-wallpaper-background-hd-i
        </attribute>
        <widget class="QLabel" name="out_repor1">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
           <width>1043</width>
-          <height>591</height>
+          <height>581</height>
          </rect>
         </property>
         <property name="mouseTracking">
@@ -152,7 +155,7 @@ border-image: url(:/imagen/recursos/pngtree-green-cool-wallpaper-background-hd-i
           <x>0</x>
           <y>0</y>
           <width>1043</width>
-          <height>591</height>
+          <height>581</height>
          </rect>
         </property>
         <property name="text">

@@ -233,62 +233,62 @@
     <message>
         <location filename="agregar_miembros.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="agregar_miembros.ui" line="49"/>
         <source>Nombre</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="agregar_miembros.ui" line="59"/>
         <source>Apellido</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de famille</translation>
     </message>
     <message>
         <location filename="agregar_miembros.ui" line="69"/>
         <source>Rol</source>
-        <translation type="unfinished"></translation>
+        <translation>Rôle</translation>
     </message>
     <message>
         <location filename="agregar_miembros.cpp" line="9"/>
         <source>Papá</source>
-        <translation type="unfinished"></translation>
+        <translation>Papa</translation>
     </message>
     <message>
         <location filename="agregar_miembros.cpp" line="10"/>
         <source>Mamá</source>
-        <translation type="unfinished"></translation>
+        <translation>Mum</translation>
     </message>
     <message>
         <location filename="agregar_miembros.cpp" line="11"/>
         <source>Hijo</source>
-        <translation type="unfinished"></translation>
+        <translation>Fils</translation>
     </message>
     <message>
         <location filename="agregar_miembros.cpp" line="12"/>
         <source>Hija</source>
-        <translation type="unfinished"></translation>
+        <translation>Fille</translation>
     </message>
     <message>
         <location filename="agregar_miembros.cpp" line="13"/>
         <source>Otro</source>
-        <translation type="unfinished"></translation>
+        <translation>Un autre</translation>
     </message>
     <message>
         <location filename="agregar_miembros.cpp" line="14"/>
         <source>Agregar Miembro</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un membre</translation>
     </message>
     <message>
         <location filename="agregar_miembros.cpp" line="43"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="agregar_miembros.cpp" line="43"/>
         <source>Datos Erróneos o Incompletos</source>
-        <translation type="unfinished"></translation>
+        <translation>Données erronées ou incomplètes</translation>
     </message>
 </context>
 <context>
@@ -296,87 +296,87 @@
     <message>
         <location filename="categorias.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="categorias.ui" line="60"/>
         <source>Atrás</source>
-        <translation type="unfinished"></translation>
+        <translation>Retour</translation>
     </message>
     <message>
         <location filename="categorias.ui" line="80"/>
         <source>Guardar</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvez</translation>
     </message>
     <message>
         <location filename="categorias.ui" line="87"/>
         <source>Agregar</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="9"/>
         <source>Categorias</source>
-        <translation type="unfinished"></translation>
+        <translation>Catégories</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="13"/>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="13"/>
         <source>Tipo</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="43"/>
         <source>Agregar Categoria</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter une catégorie</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="43"/>
         <source>No se permiten elementos repetido en la tabla</source>
-        <translation type="unfinished"></translation>
+        <translation>Les éléments répétés ne sont pas autorisés dans le tableau</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="69"/>
         <location filename="categorias.cpp" line="92"/>
         <location filename="categorias.cpp" line="103"/>
         <source>Seleccion</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélection</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="69"/>
         <location filename="categorias.cpp" line="92"/>
         <source>No se ha seleccionado ninguna fila</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucune ligne sélectionnée</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="103"/>
         <source>Seleccione SOLO UNA fila</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez UNE SEULE ligne</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="134"/>
         <location filename="categorias.cpp" line="148"/>
         <location filename="categorias.cpp" line="150"/>
         <source>Guardar Categorias</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauver les catégories</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="134"/>
         <source>Sin datos para guardar</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucune donnée à sauvegarder</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="148"/>
         <source>Datos guardados con éxito</source>
-        <translation type="unfinished"></translation>
+        <translation>Données sauvegardées avec succès</translation>
     </message>
     <message>
         <location filename="categorias.cpp" line="150"/>
         <source>No se puede escribir sobre </source>
-        <translation type="unfinished"></translation>
+        <translation>Vous ne pouvez pas écrire sur </translation>
     </message>
 </context>
 <context>
@@ -417,92 +417,92 @@
     <message>
         <location filename="miembros.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="miembros.ui" line="29"/>
         <source>Atrás</source>
-        <translation type="unfinished"></translation>
+        <translation>Retour</translation>
     </message>
     <message>
         <location filename="miembros.ui" line="49"/>
         <source>Guardar</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvez</translation>
     </message>
     <message>
         <location filename="miembros.ui" line="56"/>
         <source>Agregar</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="11"/>
         <source>Miembros de la Familia</source>
-        <translation type="unfinished"></translation>
+        <translation>Membres de la famille</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="15"/>
         <source>Nombre</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="15"/>
         <source>Apellido</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de famille</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="15"/>
         <source>Rol</source>
-        <translation type="unfinished"></translation>
+        <translation>Rôle</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="29"/>
         <location filename="miembros.cpp" line="95"/>
         <source>Agregar Familiar</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un membre de la famille</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="49"/>
         <location filename="miembros.cpp" line="73"/>
         <location filename="miembros.cpp" line="84"/>
         <source>Seleccion</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélection</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="49"/>
         <location filename="miembros.cpp" line="73"/>
         <source>No se ha seleccionado ninguna fila</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucune ligne sélectionnée</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="84"/>
         <source>Seleccione SOLO UNA fila</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez UNE SEULE ligne</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="123"/>
         <source>Guardar contactos</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarder les contacts</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="123"/>
         <source>Sin datos para guardar</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucune donnée à sauvegarder</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="139"/>
         <location filename="miembros.cpp" line="141"/>
         <source>Guardar Datos</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarder les données</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="139"/>
         <source>Datos guardados con éxito</source>
-        <translation type="unfinished"></translation>
+        <translation>Données sauvegardées avec succès</translation>
     </message>
     <message>
         <location filename="miembros.cpp" line="141"/>
         <source>No se puede escribir sobre </source>
-        <translation type="unfinished"></translation>
+        <translation>Vous ne pouvez pas écrire sur </translation>
     </message>
 </context>
 <context>
@@ -510,32 +510,32 @@
     <message>
         <location filename="objeto_categoria.cpp" line="49"/>
         <source>Salud</source>
-        <translation type="unfinished"></translation>
+        <translation>Santé</translation>
     </message>
     <message>
         <location filename="objeto_categoria.cpp" line="52"/>
         <source>Arriendo</source>
-        <translation type="unfinished"></translation>
+        <translation>A louer</translation>
     </message>
     <message>
         <location filename="objeto_categoria.cpp" line="55"/>
         <source>Académico</source>
-        <translation type="unfinished"></translation>
+        <translation>Académique</translation>
     </message>
     <message>
         <location filename="objeto_categoria.cpp" line="58"/>
         <source>Comida</source>
-        <translation type="unfinished"></translation>
+        <translation>Nourriture</translation>
     </message>
     <message>
         <location filename="objeto_categoria.cpp" line="61"/>
         <source>Servicios Básicos</source>
-        <translation type="unfinished"></translation>
+        <translation>Services de base</translation>
     </message>
     <message>
         <location filename="objeto_categoria.cpp" line="64"/>
         <source>Personales</source>
-        <translation type="unfinished"></translation>
+        <translation>Personnel</translation>
     </message>
 </context>
 <context>
@@ -543,12 +543,12 @@
     <message>
         <location filename="objeto_registro.cpp" line="93"/>
         <source>Ingreso</source>
-        <translation type="unfinished"></translation>
+        <translation>Revenu</translation>
     </message>
     <message>
         <location filename="objeto_registro.cpp" line="96"/>
         <source>Egreso</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortie</translation>
     </message>
 </context>
 <context>
@@ -556,7 +556,7 @@
     <message>
         <location filename="principal.ui" line="14"/>
         <source>MainWindow</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="principal.ui" line="32"/>
@@ -620,7 +620,7 @@
     <message>
         <location filename="registrar_usuario.ui" line="36"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="registrar_usuario.ui" line="95"/>
@@ -669,7 +669,7 @@
     <message>
         <location filename="registro.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="registro.ui" line="33"/>
@@ -770,7 +770,7 @@
     <message>
         <location filename="reportes.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="reportes.ui" line="34"/>
@@ -818,7 +818,7 @@
     <message>
         <location filename="usuarios_admin.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="usuarios_admin.ui" line="48"/>
