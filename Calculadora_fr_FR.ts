@@ -67,17 +67,17 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="acerca_de.ui" line="72"/>
+        <location filename="acerca_de.ui" line="75"/>
         <source>SAFE HOME</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="acerca_de.ui" line="85"/>
+        <location filename="acerca_de.ui" line="88"/>
         <source>v 0.1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="acerca_de.ui" line="98"/>
+        <location filename="acerca_de.ui" line="101"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;Aplicación para controlar las finanzas familiares&lt;/p&gt;&lt;p align=&quot;justify&quot;&gt;Autores: &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Nubia Araujo &amp;lt;naraujog@est.ups.edu.ec&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Nicol Constante &amp;lt;mconstantem1@est.ups.edu.ec&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Stefany Gavilanes &amp;lt;sgavilanesc1@est.ups.edu.ec&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Alejandro Valencia &amp;lt;avalenciap2@est.ups.edu.ec&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation></translation>
     </message>
@@ -121,7 +121,7 @@
         <translation>Options</translation>
     </message>
     <message>
-        <location filename="admin.ui" line="195"/>
+        <location filename="admin.ui" line="199"/>
         <source>Principal</source>
         <translation>Principal</translation>
     </message>
@@ -559,85 +559,85 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="principal.ui" line="50"/>
+        <location filename="principal.ui" line="49"/>
         <source>Egresos Totales $</source>
-        <translation type="unfinished"></translation>
+        <translation>Dépenses totales</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="74"/>
+        <location filename="principal.ui" line="72"/>
         <source>Ingresos Totales $</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="principal.ui" line="133"/>
+        <location filename="principal.ui" line="122"/>
         <source>Opciones</source>
-        <translation type="unfinished">Options</translation>
+        <translation>Options</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="148"/>
+        <location filename="principal.ui" line="137"/>
         <source>Ayuda</source>
-        <translation type="unfinished"></translation>
+        <translation>Aide</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="154"/>
+        <location filename="principal.ui" line="143"/>
         <source>Idioma</source>
-        <translation type="unfinished"></translation>
+        <translation>Langue</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="166"/>
+        <location filename="principal.ui" line="159"/>
         <source>toolBar</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="principal.ui" line="194"/>
+        <location filename="principal.ui" line="186"/>
         <source>Miembros</source>
-        <translation type="unfinished"></translation>
+        <translation>Membres</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="203"/>
+        <location filename="principal.ui" line="195"/>
         <source>Categorias</source>
-        <translation type="unfinished">Catégories</translation>
+        <translation>Catégories</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="212"/>
+        <location filename="principal.ui" line="204"/>
         <source>Registrar</source>
-        <translation type="unfinished">Registre</translation>
+        <translation>Registre</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="221"/>
+        <location filename="principal.ui" line="213"/>
         <source>Reporte</source>
-        <translation type="unfinished"></translation>
+        <translation>Rapport</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="230"/>
+        <location filename="principal.ui" line="222"/>
         <source>Acerca de</source>
-        <translation type="unfinished"></translation>
+        <translation>À propos de</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="239"/>
-        <location filename="principal.ui" line="242"/>
+        <location filename="principal.ui" line="231"/>
+        <location filename="principal.ui" line="234"/>
         <source>Salir</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortie</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="251"/>
+        <location filename="principal.ui" line="243"/>
         <source>Administrador</source>
-        <translation type="unfinished">Administrateur</translation>
+        <translation>Administrateur</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="256"/>
+        <location filename="principal.ui" line="248"/>
         <source>Ingles</source>
-        <translation type="unfinished"></translation>
+        <translation>Anglais</translation>
     </message>
     <message>
-        <location filename="principal.ui" line="261"/>
+        <location filename="principal.ui" line="253"/>
         <source>Frances</source>
-        <translation type="unfinished"></translation>
+        <translation>Frances</translation>
     </message>
     <message>
-        <location filename="principal.cpp" line="23"/>
+        <location filename="principal.cpp" line="22"/>
         <source>Acerca De</source>
-        <translation type="unfinished"></translation>
+        <translation>À propos de</translation>
     </message>
 </context>
 <context>
@@ -650,43 +650,43 @@
     <message>
         <location filename="registrar_usuario.ui" line="102"/>
         <source>Registrate</source>
-        <translation type="unfinished"></translation>
+        <translation>Registre</translation>
     </message>
     <message>
         <location filename="registrar_usuario.ui" line="121"/>
         <source>Usuario</source>
-        <translation type="unfinished">Utilisateur</translation>
+        <translation>Utilisateur</translation>
     </message>
     <message>
         <location filename="registrar_usuario.ui" line="143"/>
         <source>Contraseña</source>
-        <translation type="unfinished">Mot de passe</translation>
+        <translation>Mot de passe</translation>
     </message>
     <message>
         <location filename="registrar_usuario.ui" line="159"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="registrar_usuario.cpp" line="11"/>
         <source>Registrar</source>
-        <translation type="unfinished">Registre</translation>
+        <translation>Registre</translation>
     </message>
     <message>
         <location filename="registrar_usuario.cpp" line="26"/>
         <location filename="registrar_usuario.cpp" line="34"/>
         <source>Error</source>
-        <translation type="unfinished">Erreur</translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="registrar_usuario.cpp" line="26"/>
         <source>Datos Erróneos o Incompletos</source>
-        <translation type="unfinished">Données erronées ou incomplètes</translation>
+        <translation>Données erronées ou incomplètes</translation>
     </message>
     <message>
         <location filename="registrar_usuario.cpp" line="34"/>
         <source>Cuenta de Usuario ya registrada</source>
-        <translation type="unfinished"></translation>
+        <translation>Compte d&apos;utilisateur déjà enregistré</translation>
     </message>
 </context>
 <context>
@@ -700,94 +700,94 @@
         <location filename="registro.ui" line="36"/>
         <location filename="registro.cpp" line="10"/>
         <source>REGISTRO</source>
-        <translation type="unfinished"></translation>
+        <translation>REGISTRE</translation>
     </message>
     <message>
         <location filename="registro.ui" line="55"/>
         <source>Guardar</source>
-        <translation type="unfinished">Sauvez</translation>
+        <translation>Sauvez</translation>
     </message>
     <message>
         <location filename="registro.ui" line="71"/>
         <source>Atrás</source>
-        <translation type="unfinished">Retour</translation>
+        <translation>Retour</translation>
     </message>
     <message>
         <location filename="registro.ui" line="89"/>
         <source>Tipo</source>
-        <translation type="unfinished">Type</translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location filename="registro.ui" line="107"/>
         <source>Egreso</source>
-        <translation type="unfinished">Sortie</translation>
+        <translation>Sortie</translation>
     </message>
     <message>
         <location filename="registro.ui" line="125"/>
         <source>Miembro Familiar</source>
-        <translation type="unfinished"></translation>
+        <translation>Membre de la famille</translation>
     </message>
     <message>
         <location filename="registro.ui" line="143"/>
         <source>Descripción</source>
-        <translation type="unfinished"></translation>
+        <translation>Description</translation>
     </message>
     <message>
         <location filename="registro.ui" line="178"/>
         <location filename="registro.ui" line="279"/>
         <source>Escoja...</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisissez...</translation>
     </message>
     <message>
         <location filename="registro.ui" line="196"/>
         <source>Ingreso</source>
-        <translation type="unfinished">Revenu</translation>
+        <translation>Revenu</translation>
     </message>
     <message>
         <location filename="registro.ui" line="214"/>
         <source>Fecha/Hora</source>
-        <translation type="unfinished"></translation>
+        <translation>Date/heure</translation>
     </message>
     <message>
         <location filename="registro.ui" line="245"/>
         <source>Categoría</source>
-        <translation type="unfinished"></translation>
+        <translation>Catégorie</translation>
     </message>
     <message>
         <location filename="registro.ui" line="263"/>
         <source>Valor</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeur</translation>
     </message>
     <message>
         <location filename="registro.ui" line="311"/>
         <source>Limpiar</source>
-        <translation type="unfinished"></translation>
+        <translation>Nettoyer</translation>
     </message>
     <message>
         <location filename="registro.cpp" line="45"/>
         <source>Error</source>
-        <translation type="unfinished">Erreur</translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="registro.cpp" line="45"/>
         <source>Seleccione al menos una opción</source>
-        <translation type="unfinished">Sélectionnez au moins une option</translation>
+        <translation>Sélectionnez au moins une option</translation>
     </message>
     <message>
         <location filename="registro.cpp" line="50"/>
         <location filename="registro.cpp" line="70"/>
         <source>Registro</source>
-        <translation type="unfinished"></translation>
+        <translation>Registre</translation>
     </message>
     <message>
         <location filename="registro.cpp" line="50"/>
         <source>Por favor llene todos los campos</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez remplir tous les champs</translation>
     </message>
     <message>
         <location filename="registro.cpp" line="70"/>
         <source>Datos guardados con éxito</source>
-        <translation type="unfinished">Données sauvegardées avec succès</translation>
+        <translation>Données sauvegardées avec succès</translation>
     </message>
 </context>
 <context>
@@ -800,57 +800,57 @@
     <message>
         <location filename="reportes.ui" line="44"/>
         <source>Seleccione un familiar</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez un membre de la famille</translation>
     </message>
     <message>
         <location filename="reportes.ui" line="54"/>
         <source>Escoja...</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisissez...</translation>
     </message>
     <message>
         <location filename="reportes.ui" line="78"/>
         <source>Guardar</source>
-        <translation type="unfinished">Sauvez</translation>
+        <translation>Sauvez</translation>
     </message>
     <message>
         <location filename="reportes.ui" line="88"/>
         <source>Imprimir</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimer</translation>
     </message>
     <message>
         <location filename="reportes.ui" line="103"/>
         <source>Seleccione el tipo de reporte</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez le type de rapport</translation>
     </message>
     <message>
         <location filename="reportes.ui" line="123"/>
         <source>Ingresos</source>
-        <translation type="unfinished"></translation>
+        <translation>Revenu</translation>
     </message>
     <message>
         <location filename="reportes.ui" line="150"/>
         <source>Egresos</source>
-        <translation type="unfinished"></translation>
+        <translation>Dépenses</translation>
     </message>
     <message>
         <location filename="reportes.ui" line="183"/>
         <source>Atrás</source>
-        <translation type="unfinished">Retour</translation>
+        <translation>Retour</translation>
     </message>
     <message>
         <location filename="reportes.cpp" line="10"/>
         <source>REPORTES</source>
-        <translation type="unfinished"></translation>
+        <translation>RAPPORTS</translation>
     </message>
     <message>
         <location filename="reportes.cpp" line="41"/>
         <source>Ingreso</source>
-        <translation type="unfinished">Revenu</translation>
+        <translation>Revenu</translation>
     </message>
     <message>
         <location filename="reportes.cpp" line="44"/>
         <source>Egreso</source>
-        <translation type="unfinished">Sortie</translation>
+        <translation>Sortie</translation>
     </message>
 </context>
 <context>
@@ -863,79 +863,79 @@
     <message>
         <location filename="usuarios_admin.ui" line="55"/>
         <source>LISTA DE USUARIOS</source>
-        <translation type="unfinished"></translation>
+        <translation>LISTE DES UTILISATEURS</translation>
     </message>
     <message>
         <location filename="usuarios_admin.ui" line="93"/>
         <source>Borrar Usuario</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer l&apos;utilisateur</translation>
     </message>
     <message>
         <location filename="usuarios_admin.ui" line="125"/>
         <source>Borrar Cuenta de Administrador</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer le compte administrateur</translation>
     </message>
     <message>
         <location filename="usuarios_admin.ui" line="141"/>
         <source>Salir</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortie</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="10"/>
         <source>ADMINISTRADOR</source>
-        <translation type="unfinished">ADMINISTRATEUR</translation>
+        <translation>ADMINISTRATEUR</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="14"/>
         <source>Usuario</source>
-        <translation type="unfinished">Utilisateur</translation>
+        <translation>Utilisateur</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="14"/>
         <source>Contraseña</source>
-        <translation type="unfinished">Mot de passe</translation>
+        <translation>Mot de passe</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="61"/>
         <source>Seleccion</source>
-        <translation type="unfinished">Sélection</translation>
+        <translation>Sélection</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="61"/>
         <source>No se ha seleccionado ninguna fila</source>
-        <translation type="unfinished">Aucune ligne sélectionnée</translation>
+        <translation>Aucune ligne sélectionnée</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="66"/>
         <location filename="usuarios_admin.cpp" line="102"/>
         <source>Confirmacion</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmation</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="66"/>
         <source>Desea borrar esta cuenta permanentemente?</source>
-        <translation type="unfinished"></translation>
+        <translation>Voulez-vous supprimer ce compte de façon permanente ?</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="102"/>
         <source>Desea borrar su cuenta de administrador?</source>
-        <translation type="unfinished"></translation>
+        <translation>Voulez-vous supprimer votre compte administrateur ?</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="113"/>
         <location filename="usuarios_admin.cpp" line="117"/>
         <source>Borrar Cuenta Admin</source>
-        <translation type="unfinished">Supprimer le compte Administrateur</translation>
+        <translation>Supprimer le compte Administrateur</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="113"/>
         <source>Su cuenta ha sido borrada exitosamente</source>
-        <translation type="unfinished"></translation>
+        <translation>Votre compte a été supprimé avec succès</translation>
     </message>
     <message>
         <location filename="usuarios_admin.cpp" line="117"/>
         <source>No se pudo eliminar la cuenta</source>
-        <translation type="unfinished"></translation>
+        <translation>Le compte n&apos;a pas pu être supprimé</translation>
     </message>
 </context>
 </TS>
