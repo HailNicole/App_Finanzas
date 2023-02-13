@@ -566,7 +566,7 @@
     <message>
         <location filename="principal.ui" line="72"/>
         <source>Ingresos Totales $</source>
-        <translation></translation>
+        <translation>Ingresos Totales $</translation>
     </message>
     <message>
         <location filename="principal.ui" line="122"/>
