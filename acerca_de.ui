@@ -30,6 +30,9 @@ background-color: rgb(233, 253, 173);</string>
      <height>32</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(194, 249, 149);</string>
+   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>

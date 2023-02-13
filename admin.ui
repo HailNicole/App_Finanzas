@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(156, 245, 147);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="horizontalLayoutWidget_2">
@@ -172,7 +172,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(194, 249, 149);</string>
    </property>
    <widget class="QMenu" name="menuOpciones">
     <property name="title">
@@ -185,7 +185,11 @@
    </widget>
    <addaction name="menuOpciones"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(194, 249, 149);</string>
+   </property>
+  </widget>
   <action name="actionPrincipal">
    <property name="icon">
     <iconset resource="recursos.qrc">

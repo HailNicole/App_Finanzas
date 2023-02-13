@@ -177,7 +177,7 @@ border-image: url(:/imagen/recursos/pngtree-green-cool-wallpaper-background-hd-i
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(194, 249, 149);</string>
    </property>
    <property name="text">
     <string>Atrás</string>

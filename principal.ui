@@ -43,8 +43,7 @@ background-color: rgb(166, 244, 102);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(213, 255, 248);
-background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(235, 255, 253);</string>
     </property>
     <property name="text">
      <string>Egresos Totales $</string>
@@ -67,8 +66,7 @@ background-color: rgb(255, 255, 255);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(213, 255, 248);
-background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(235, 255, 253);</string>
     </property>
     <property name="text">
      <string>Ingresos Totales $</string>
@@ -84,8 +82,7 @@ background-color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(213, 255, 248);
-background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(235, 255, 253);</string>
     </property>
     <property name="text">
      <string/>
@@ -101,8 +98,7 @@ background-color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(213, 255, 248);
-background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(235, 255, 253);</string>
     </property>
     <property name="text">
      <string/>
@@ -117,6 +113,9 @@ background-color: rgb(255, 255, 255);</string>
      <width>800</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(156, 245, 147);</string>
    </property>
    <widget class="QMenu" name="menuOpciones">
     <property name="title">
@@ -150,14 +149,17 @@ background-color: rgb(255, 255, 255);</string>
    <addaction name="menuAcerca_de"/>
    <addaction name="menuIdioma"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(194, 249, 149);</string>
+   </property>
+  </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
     <string>toolBar</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(166, 244, 102);
-background-color: rgb(194, 249, 149);</string>
+    <string notr="true">background-color: rgb(194, 249, 149);</string>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
