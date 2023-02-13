@@ -19,5 +19,8 @@
         <file>recursos/francia.png</file>
         <file>recursos/pngtree-green-cool-wallpaper-background-hd-image_736893.jpg</file>
     </qresource>
-    <qresource prefix="/"/>
+    <qresource prefix="/">
+        <file>Calculadora_fr_FR.qm</file>
+        <file>Calculadora_en.qm</file>
+    </qresource>
 </RCC>

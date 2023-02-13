@@ -8,7 +8,6 @@ Principal::Principal(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowTitle("Safe Home");
-
 }
 
 Principal::~Principal()
@@ -26,7 +25,6 @@ void Principal::on_actionAcerca_de_triggered()
     // Mostrar la venta en modo MODAL
     dialog->exec();
 }
-
 
 void Principal::on_actionMiembros_triggered()
 {
@@ -85,4 +83,22 @@ void Principal::on_actionAdministrador_triggered()
     this->hide();
     Admin *admin = new Admin(this);
     admin->show();
+}
+
+void Principal::changeEvent(QEvent *e)
+{
+    if(e->type() == QEvent::LanguageChange){
+        ui->retranslateUi(this);
+    }
+    qApp->installTranslator(&traducion);
+}
+
+void Principal::on_actionIngles_triggered()
+{
+    traducion.load(":/Calculadora_en.qm");
+}
+
+void Principal::on_actionFrances_triggered()
+{
+    traducion.load(":/Calculadora_fr_FR.qm");
 }

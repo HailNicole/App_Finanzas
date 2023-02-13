@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QDebug>
+#include <QTranslator>
+#include <QEvent>
 #include "acerca_de.h"
 #include "miembros.h"
 #include "categorias.h"
@@ -26,6 +28,7 @@ public:
     explicit Principal(QWidget *parent = nullptr);
     ~Principal();
     bool acceso();
+
 private slots:
     void on_actionAcerca_de_triggered();
 
@@ -41,10 +44,16 @@ private slots:
 
     void on_actionAdministrador_triggered();
 
+    void on_actionIngles_triggered();
+
+    void on_actionFrances_triggered();
+
+protected:
+    void changeEvent(QEvent * event) override;
 private:
     Ui::Principal *ui;
     Controlador *m_controlador;
-
+    QTranslator traducion;
 };
 
 #endif // PRINCIPAL_H

@@ -126,9 +126,7 @@ void Registro::Cargar_Dinero()
         while(!entrada.atEnd()){
             QString linea = entrada.readLine();
             QStringList datos = linea.split(";");
-            qDebug()<<datos.at(0);
-            qDebug()<<datos.at(1);
-            //Agregar al comboBox
+
             conting = datos.at(0).toDouble();
             contegr = datos.at(1).toDouble();
         }

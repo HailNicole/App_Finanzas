@@ -139,8 +139,16 @@ background-color: rgb(255, 255, 255);</string>
     </property>
     <addaction name="actionAcerca_de"/>
    </widget>
+   <widget class="QMenu" name="menuIdioma">
+    <property name="title">
+     <string>Idioma</string>
+    </property>
+    <addaction name="actionIngles"/>
+    <addaction name="actionFrances"/>
+   </widget>
    <addaction name="menuOpciones"/>
    <addaction name="menuAcerca_de"/>
+   <addaction name="menuIdioma"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -231,6 +239,16 @@ background-color: rgb(194, 249, 149);</string>
    </property>
    <property name="text">
     <string>Administrador</string>
+   </property>
+  </action>
+  <action name="actionIngles">
+   <property name="text">
+    <string>Ingles</string>
+   </property>
+  </action>
+  <action name="actionFrances">
+   <property name="text">
+    <string>Frances</string>
    </property>
   </action>
  </widget>

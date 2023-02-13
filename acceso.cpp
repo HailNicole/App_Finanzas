@@ -60,17 +60,3 @@ bool Acceso::getBandera() const
 {
     return bandera;
 }
-
-void Acceso::on_btn_ingles_clicked()
-{
-    QTranslator traducion;
-    traducion.load(":/Calculadora_en.qm");
-}
-
-
-void Acceso::on_btn_francia_clicked()
-{
-    QTranslator traducion;
-    traducion.load(":/Calculadora_fr_FR.qm");
-}
-

@@ -150,7 +150,6 @@ void Reportes::on_btn_atras_clicked()
     this->close();
 }
 
-
 void Reportes::on_btn_imp_clicked()
 {
     //Crear un objeto QDir a partir del directorio del usuario
