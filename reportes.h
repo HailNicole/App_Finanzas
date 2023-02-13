@@ -5,6 +5,7 @@
 #include <QWidget>
 #include "controlador.h"
 #include <QPainter>
+#include <QPixmap>
 #include <QFileDialog>
 #include <QFile>
 #include <QDir>
@@ -13,6 +14,8 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QPdfWriter>
+#include <QPrinter>
+#include <QPrintDialog>
 
 namespace Ui {
 class Reportes;

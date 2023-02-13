@@ -155,16 +155,23 @@ void Reportes::on_btn_imp_clicked()
 {
     //Crear un objeto QDir a partir del directorio del usuario
     QDir directorio = QDir::home();
-
-    //Agregar al path absoluto del objeto un nombre por defecto del archivo
     QString pathArchivo = directorio.absolutePath() + "/Reportes.pdf";
 
-    QPdfWriter pdf(pathArchivo);
+    QPrinter printer;
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setOutputFileName(pathArchivo);
 
-    QPainter painter(&pdf);
+    QPainter painter;
+    if(!painter.begin(&printer)){
+        return;
+    }
 
-    painter.drawPixmap(100,400,QPixmap(*lienzo));
+    painter.drawPixmap(0,100, *lienzo);
 
+    if(!printer.newPage()){
+        return;
+    }
+    painter.drawPixmap(0,100,*lienzo2);
     painter.end();
 
     QDesktopServices::openUrl(QUrl::fromLocalFile(pathArchivo));
@@ -178,9 +185,9 @@ void Reportes::on_btn_savereport_clicked()
                                                          QDir::home().absolutePath() + "/reportes.png",
                                                          "Imágenes .png (*.png)");
     // Validar que el nombre del archivo no sea vacío
-    if ( !nombreArchivo.isEmpty() ){
+    if ( !nombreArchivo.isEmpty()){
         // Guardar imagen
-        if (lienzo->save(nombreArchivo)){
+        if (lienzo->save(nombreArchivo) or lienzo2->save(nombreArchivo)){
             // Si todo va bien, muestra un mensaje de información
             QMessageBox::information(this,
                                      "Guardar imagen",
