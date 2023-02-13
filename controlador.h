@@ -27,6 +27,7 @@ public:
     void Guardar_U(QMap<QString, QString> usr);
     void Guardar_Admin(QMap<QString, QString> usr);
     void Guardar_R(QList<Objeto_registro*> reg);
+    void Guardar_Dinero(double ing, double eng);
 
     void crear_archivo();
     bool validar_email(QString email);

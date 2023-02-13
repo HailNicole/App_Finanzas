@@ -122,6 +122,16 @@ void Controlador::Guardar_R(QList<Objeto_registro*> reg)
     dts.close();
 }
 
+void Controlador::Guardar_Dinero(double ing, double eng)
+{
+    QFile money("dinero.csv");
+    QTextStream io;
+    money.open(QIODevice::WriteOnly | QIODevice::Append);
+    io.setDevice(&money);
+    io<<ing << ";" <<eng << "\n";
+    money.close();
+}
+
 void Controlador::crear_archivo()
 {
     if(!QFile("registro_usuarios.csv").exists()){
@@ -148,6 +158,11 @@ void Controlador::crear_archivo()
         QFile admin("admin.csv.csv");
         admin.open(QIODevice::ReadWrite | QIODevice::Text);
         admin.close();
+    }
+    if(!QFile("dinero.csv").exists()){
+        QFile money("dinero.csv");
+        money.open(QIODevice::ReadWrite | QIODevice::Text);
+        money.close();
     }
 }
 

@@ -52,6 +52,7 @@ private:
     void cargar_R();
     void contador();
 
+
     QList<QString> ingresos;
     QList<QString> egresos;
 

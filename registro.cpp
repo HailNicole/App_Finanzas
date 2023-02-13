@@ -16,6 +16,7 @@ Registro::Registro(QWidget *parent) :
     ui->in_day->setDate(QDate::currentDate());
     ui->in_day->setTime(QTime::currentTime());
     Cargar_Registro();
+    Cargar_Dinero();
 }
 
 Registro::~Registro()
@@ -65,6 +66,7 @@ void Registro::on_btnGuardarReg_clicked()
         contegr+=value;
     }
 
+    m_controlador2->Guardar_Dinero(conting, contegr);
     QMessageBox::information(this, tr("Registro"), tr("Datos guardados con éxito"));
     limpiar();
 }
@@ -110,6 +112,27 @@ void Registro::Cargar_Registro()
             list.append(obj);
         }
         dts.close();
+    }
+}
+
+void Registro::Cargar_Dinero()
+{
+    QFile money("dinero.csv");
+    if (!money.exists())
+        return;
+    // cargar datos
+    if (money.open(QFile::ReadOnly)) {
+        QTextStream entrada(&money);
+        while(!entrada.atEnd()){
+            QString linea = entrada.readLine();
+            QStringList datos = linea.split(";");
+            qDebug()<<datos.at(0);
+            qDebug()<<datos.at(1);
+            //Agregar al comboBox
+            conting = datos.at(0).toDouble();
+            contegr = datos.at(1).toDouble();
+        }
+        money.close();
     }
 }
 

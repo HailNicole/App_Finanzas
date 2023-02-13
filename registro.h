@@ -19,7 +19,6 @@ public:
     ~Registro();
 
     double getConting() const;
-
     double getContegr() const;
 
 private slots:
@@ -35,6 +34,7 @@ private:
     QList<Objeto_registro*> list;
     void limpiar();
     void Cargar_Registro();
+    void Cargar_Dinero();
     double conting=0;
     double contegr=0;
 

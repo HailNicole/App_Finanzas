@@ -187,17 +187,33 @@ void Reportes::on_btn_savereport_clicked()
     // Validar que el nombre del archivo no sea vacío
     if ( !nombreArchivo.isEmpty()){
         // Guardar imagen
-        if (lienzo->save(nombreArchivo) or lienzo2->save(nombreArchivo)){
-            // Si todo va bien, muestra un mensaje de información
-            QMessageBox::information(this,
+        if(ui->tab->isVisible()){
+            if (lienzo->save(nombreArchivo)){
+                // Si todo va bien, muestra un mensaje de información
+                QMessageBox::information(this,
+                                         "Guardar imagen",
+                                         "Archivo almacenado en: " + nombreArchivo);
+            } else{
+                // Si hay algún error, muestro advertencia
+                QMessageBox::warning(this,
                                      "Guardar imagen",
-                                     "Archivo almacenado en: " + nombreArchivo);
-        } else{
-            // Si hay algún error, muestro advertencia
-            QMessageBox::warning(this,
-                                 "Guardar imagen",
-                                 "No se pudo almacenar la imagen.");
-        }
+                                     "No se pudo almacenar la imagen.");
+            }
+        };
+        if(ui->tab_2->isVisible()){
+            if (lienzo2->save(nombreArchivo)){
+                // Si todo va bien, muestra un mensaje de información
+                QMessageBox::information(this,
+                                         "Guardar imagen",
+                                         "Archivo almacenado en: " + nombreArchivo);
+            } else{
+                // Si hay algún error, muestro advertencia
+                QMessageBox::warning(this,
+                                     "Guardar imagen",
+                                     "No se pudo almacenar la imagen.");
+            }
+        };
+
     }
 }
 
